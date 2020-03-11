@@ -1,0 +1,2 @@
+"id", "type", "category", "dateLastWatering", "address__streetAddress", "address__adressLocality", "address__addressCountry", "location__coordinates", "soilTemperature", "soilMoistureVwc"
+"FlowerBed-345", "FlowerBed", "['urbanTreeSpot']", "2017-03-31T08:00:00Z", "Paseo Zorrilla, 122", "Valladolid", "Spain", "[-4.743187, 41.627999]", "17", "0.85"
