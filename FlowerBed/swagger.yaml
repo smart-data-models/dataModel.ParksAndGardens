@@ -14,8 +14,8 @@ paths:
   /ngsi-ld/v1/entities: 
     get: 
       description: >-
-         A garden is a distinguishable planned space, usually outdoors, set aside for
-         the display, cultivation, and enjoyment of plants and other forms of nature.
+         A FlowerBed is a distinguishable planned space, usually outdoors, set aside for
+          the display, cultivation, and enjoyment of plants and other forms of nature.
       parameters: 
         - 
           in: query
