@@ -14,9 +14,8 @@ paths:
   /ngsi-ld/v1/entities: 
     get: 
       description: >-
-         This entity contains a harmonised description of a generic crop. This entity
-         is primarily associated with the agricultural vertical and related IoT
-          applications.
+         A garden is a distinguishable planned space, usually outdoors, set aside for
+         the display, cultivation, and enjoyment of plants and other forms of nature.
       parameters: 
         - 
           in: query
