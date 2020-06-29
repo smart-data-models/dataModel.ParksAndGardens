@@ -2,7 +2,7 @@
 components: 
   schemas: 
     FlowerBed: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/FlowerBed/schema.yaml#/FlowerBed"
+      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/model.yaml#/FlowerBed"
 info: 
   description: ""
   title: FlowerBed
@@ -35,12 +35,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/FlowerBed/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/FlowerBed/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

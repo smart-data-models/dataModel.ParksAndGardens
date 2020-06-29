@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Garden: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/Garden/schema.yaml#/Garden"
+      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/Garden/model.yaml#/Garden"
 info: 
   description: ""
   title: Garden
@@ -35,12 +35,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/Garden/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/Garden/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/Garden/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/Garden/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

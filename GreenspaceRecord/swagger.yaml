@@ -2,7 +2,7 @@
 components: 
   schemas: 
     GreenspaceRecord: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/GreenspaceRecord/schema.yaml#/GreenspaceRecord"
+      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/model.yaml#/GreenspaceRecord"
 info: 
   description: ""
   title: GreenspaceRecord
@@ -37,12 +37,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/GreenspaceRecord/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/GreenspaceRecord/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
