@@ -36,11 +36,8 @@ GreenspaceRecord:
         https://smart-data-models.github.io/data-models/schema.org.yaml#/color
 
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property
