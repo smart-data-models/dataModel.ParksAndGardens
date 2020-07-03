@@ -12,7 +12,7 @@ Garden:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     A garden is a distinguishable planned space, usually outdoors, set aside for
     the display, cultivation, and enjoyment of plants and other forms of nature.
   properties:
