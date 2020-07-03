@@ -103,12 +103,14 @@ FlowerBed:
       type: string
       description: ''
     owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    refRecord:
       x-ngsi:
         type: Relationship
-        model: https://schema.org/URL  
       type: array
       description: ''
-      items: &ref_0
+      tems: &ref_0
         anyOf:
           - type: string
             minLength: 1
@@ -116,12 +118,6 @@ FlowerBed:
             pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
           - type: string
             format: uri
-    refRecord:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items: *ref_0
     source:
       x-ngsi:
         type: Property
