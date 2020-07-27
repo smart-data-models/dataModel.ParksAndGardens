@@ -40,13 +40,13 @@ GreenspaceRecord:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     dateObserved:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The date and time of this observation in ISO8601 UTCformat.'
       format: date-time
     description:
       $ref: >-
@@ -65,34 +65,23 @@ GreenspaceRecord:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     soilMoistureEc:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: ' The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m).'
     soilMoistureVwc:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one).'
     soilTemperature:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The observed soil temperature in Celsius degrees.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
