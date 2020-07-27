@@ -24,12 +24,12 @@ FlowerBed:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'alternateName of this flower bed.'
     annotations:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'annotations of this flower bed.'
       items:
         type: string
     areaServed:
@@ -37,12 +37,12 @@ FlowerBed:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'areaServed of this flower bed.'
     category:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Category of this flower bed.'
       items:
         type: string
         enum:
@@ -94,7 +94,7 @@ FlowerBed:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Deadline for next watering operation.'
       format: date-time
     openingHours:
       x-ngsi:
@@ -103,11 +103,8 @@ FlowerBed:
       type: string
       description: ''
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
       items: &ref_0
         anyOf:
           - type: string
@@ -120,7 +117,7 @@ FlowerBed:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'List of records which contain measurements related to this flower bed.'
       items: *ref_0
     source:
       x-ngsi:
