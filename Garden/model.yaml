@@ -33,7 +33,7 @@ Garden:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Garden's category.'
       items:
         type: string
         enum:
@@ -57,7 +57,7 @@ Garden:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Timestamp which corresponds to the last watering of this garden.'
       format: date-time
     description:
       $ref: >-
@@ -76,7 +76,7 @@ Garden:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: ' Deadline for next watering operation to be done on this garden.'
       format: date-time
     openingHours:
       $ref: >-
@@ -87,7 +87,7 @@ Garden:
       x-ngsi:
         type: Relationship
       type: array
-      description: ''
+      description: 'List of records which contain measurements related to this garden.'
       items: &ref_0
         anyOf:
           - type: string
