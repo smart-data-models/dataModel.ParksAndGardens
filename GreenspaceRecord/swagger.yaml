@@ -17,7 +17,7 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: >-
+      description: |
          This entity contains a harmonised description of the conditions recorded on
           a particular area or point inside a greenspace (flower bed, garden, etc.).
          This entity type has been inspired by the AgriParcelRecord entity type

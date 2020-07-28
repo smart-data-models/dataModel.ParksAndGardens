@@ -12,7 +12,7 @@ GreenspaceRecord:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of the conditions recorded on
     a particular area or point inside a greenspace (flower bed, garden, etc.).
     This entity type has been inspired by the AgriParcelRecord entity type
@@ -36,11 +36,8 @@ GreenspaceRecord:
         https://smart-data-models.github.io/data-models/schema.org.yaml#/color
 
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Specifies the URL to information about the provider of this information'
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property
