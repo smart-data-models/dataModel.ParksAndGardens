@@ -26,7 +26,7 @@ FlowerBed:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'annotations of this flower bed.'
       items:
         type: string
     areaServed:
@@ -34,12 +34,12 @@ FlowerBed:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'areaServed of this flower bed.'
     category:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Category of this flower bed.'
       items:
         type: string
         enum:
@@ -88,7 +88,7 @@ FlowerBed:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'Deadline for next watering operation.'
       format: date-time
     openingHours:
       $ref: >-
@@ -100,8 +100,8 @@ FlowerBed:
       x-ngsi:
         type: Relationship
       type: array
-      description: ''
-      tems: &ref_0
+      description: 'List of records which contain measurements related to this flower bed.'
+      items: &ref_0
         anyOf:
           - type: string
             minLength: 1
