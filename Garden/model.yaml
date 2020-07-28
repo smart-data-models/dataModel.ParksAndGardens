@@ -33,7 +33,7 @@ Garden:
       x-ngsi:
         type: Property
       type: array
-      description: 'Garden's category.'
+      description: 'Category of the Garden.'
       items:
         type: string
         enum:
