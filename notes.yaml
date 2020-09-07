@@ -1,0 +1,11 @@
+notesPrevious:
+  These data models are intended to model parks, gardens and related green spaces
+  in a city.
+
+notesEnd:
+
+  New entities pending to be defined
+    `WateringPoint` . To model watering points and how they could be controlled
+      by means of IoT.
+    `GreenSpaceOperation` . To model operations to be done on green spaces in a
+      city. Operations can be watering, fertilization, pesticide drop, etc.
