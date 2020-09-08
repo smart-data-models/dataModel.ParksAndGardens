@@ -20,7 +20,7 @@ defined by the GSMA Harmonized Data Models.
 
 
 
-[Link](https://smart-data-models.github.io/dataModel.ParksAndGardens/CONTRIBUTORS.yaml) to the 4 current contributors of the data models of this Subject.
+No public contributors currently.
 
 You can raise an [issue](https://github.com/smart-data-models/dataModel.ParksAndGardens/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.ParksAndGardens/pulls) on existing data models
 
