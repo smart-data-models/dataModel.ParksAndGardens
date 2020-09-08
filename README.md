@@ -1,6 +1,8 @@
 # dataModel.ParksAndGardens
 These data models are intended to model parks, gardens and related green spaces in a city.
 
+### List of data models
+
 The following entity types are available:
 - [FlowerBed](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/README.md). A FlowerBed is a distinguishable planned space, usually outdoors, set aside for
 the display, cultivation, and enjoyment of plants and other forms of nature.
@@ -17,8 +19,12 @@ defined by the GSMA Harmonized Data Models.
 
 
 
+
+### Contributors
 [Link](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/CONTRIBUTORS.yaml) to the 4 current contributors of the data models of this Subject.
 
+
+### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.ParksAndGardens/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.ParksAndGardens/pulls) on existing data models
 
 New entities pending to be defined `WateringPoint` . To model watering points and how they could be controlled by means of IoT. `GreenSpaceOperation` . To model operations to be done on green spaces in a city. Operations can be watering, fertilization, pesticide drop, etc.
