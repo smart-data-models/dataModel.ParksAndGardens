@@ -1,2 +1,0 @@
-"id", "type", "refGreenspace__value", "temperature__value", "soilTemperature__value", "location__value__coordinates", "relativeHumidity__value", "dateObserved__value"
-"Santander-Garden-Piquio-Record-1", "GreenspaceRecord", "Santander-Garden-Piquio", "17", "13", "[-3.7836974, 43.4741091]", "0.87", "2019-01-15T12:00:00Z"
