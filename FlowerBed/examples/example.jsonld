@@ -1,0 +1,13 @@
+{"@context": ["https://schema.lab.fiware.org/ld/context",
+              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
+ "address": {"addressCountry": "Spain",
+             "adressLocality": "Valladolid",
+             "streetAddress": "Paseo Zorrilla, 122",
+             "type": "PostalAddress"},
+ "category": ["urbanTreeSpot"],
+ "dateLastWatering": {"@type": "DateTime", "@value": "2017-03-31T08:00:00Z"},
+ "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",
+ "location": {"coordinates": [-4.743187, 41.627999], "type": "Point"},
+ "soilMoistureVwc": 0.85,
+ "soilTemperature": 17,
+ "type": "FlowerBed"}
