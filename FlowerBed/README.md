@@ -9,7 +9,7 @@ the display, cultivation, and enjoyment of plants and other forms of nature.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/examples/example.json) (keyvalues) for NGSI v2
