@@ -11,7 +11,7 @@ defined by the GSMA Harmonized Data Models.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/examples/example.json) (keyvalues) for NGSI v2
