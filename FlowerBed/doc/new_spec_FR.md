@@ -1,13 +1,14 @@
 Entité : FlowerBed  
 ==================  
 Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
-Description globale : **Une parcelle de jardin dans laquelle des fleurs (ou d'autres plantes) sont cultivées. En général, vous trouverez des plates-bandes dans les parcs, les jardins, les zones piétonnes ou les grands échangeurs d'autoroute**.  
+Description globale : **Une parcelle de jardin dans laquelle des fleurs (ou d'autres plantes) sont cultivées. En général, vous trouverez des plates-bandes dans les parcs, les jardins, les zones piétonnes ou les grands échangeurs routiers.  
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `category`:   `color`: La couleur du produit.  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateLastWatering`:   `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `depth`:   `description`: Une description de cet article  `height`:   `id`:   `image`: Une image de l'objet.  `location`:   `name`: Le nom de cet article.  `nextWateringDeadline`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refGarden`:   `seeAlso`:   `shape`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `taxon`:   `type`: NGSI Type d'entité  `width`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`:   - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateLastWatering`:   - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `depth`:   - `description`: Une description de cet article  - `height`:   - `id`:   - `image`: Une image de l'objet.  - `location`:   - `name`: Le nom de cet article.  - `nextWateringDeadline`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refGarden`:   - `seeAlso`:   - `shape`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `taxon`:   - `type`: NGSI Type d'entité  - `width`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 FlowerBed:    
   description: 'A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.'    
   properties:    
@@ -292,6 +293,9 @@ FlowerBed:
     - type    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### FlowerBed NGSI V2 valeurs clés Exemple  
 Voici un exemple d'un lit de fleurs au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -312,6 +316,7 @@ FlowerBed:
   "soilMoistureVwc": 0.85  
 }  
 ```  
+#### FlowerBed NGSI V2 normalisé Exemple  
 Voici un exemple de lit de fleurs au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -347,6 +352,7 @@ FlowerBed:
   }  
 }  
 ```  
+#### FlowerBed NGSI-LD valeurs clés Exemple  
 Voici un exemple d'un lit de fleurs au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -363,6 +369,7 @@ FlowerBed:
  "soilTemperature": 17,  
  "type": "FlowerBed"}  
 ```  
+#### FlowerBed NGSI-LD normalisé Exemple  
 Voici un exemple d'un lit de fleurs au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
