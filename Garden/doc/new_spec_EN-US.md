@@ -7,7 +7,8 @@ Entity: Garden
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`:   - `category`:   - `color`: The color of the product.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateLastWatering`:   - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `image`: An image of the item.  - `location`:   - `name`: The name of this item.  - `nextWateringDeadline`:   - `openingHours`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRecord`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `style`:   - `type`: NGSI Entity type  ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Garden:    
   description: 'A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.'    
   properties:    
@@ -285,6 +286,7 @@ Garden:
     - name    
   type: object    
 ```  
+</details>    
 #### Garden NGSI V2 key-values Example    
 Here is an example of a Garden in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
