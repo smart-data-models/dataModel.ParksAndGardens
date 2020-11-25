@@ -5,9 +5,10 @@ Entité : GreenspaceRecord
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `color`: La couleur du produit.  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateObserved`:   `description`: Une description de cet article  `id`:   `image`: Une image de l'objet.  `location`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refDevice`:   `refGreenspace`:   `seeAlso`:   `soilMoistureEc`:   `soilMoistureVwc`:   `soilTemperature`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`:   - `description`: Une description de cet article  - `id`:   - `image`: Une image de l'objet.  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refDevice`:   - `refGreenspace`:   - `seeAlso`:   - `soilMoistureEc`:   - `soilMoistureVwc`:   - `soilTemperature`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 GreenspaceRecord:    
   description: 'This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.). This entity type has been inspired by the AgriParcelRecord entity type defined by the GSMA Harmonized Data Models.'    
   properties:    
@@ -264,6 +265,9 @@ GreenspaceRecord:
     - dateObserved    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### GreenspaceRecord NGSI V2 Exemple de valeurs clés  
 Voici un exemple d'un GreenspaceRecord au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -280,6 +284,7 @@ GreenspaceRecord:
   "dateObserved": "2019-01-15T12:00:00Z"  
 }  
 ```  
+#### GreenspaceRecord NGSI V2 normalisé Exemple  
 Voici un exemple d'un GreenspaceRecord au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -311,6 +316,7 @@ GreenspaceRecord:
   }  
 }  
 ```  
+#### GreenspaceRecord NGSI-LD valeurs clés Exemple  
 Voici un exemple d'un GreenspaceRecord au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -324,6 +330,7 @@ GreenspaceRecord:
  "temperature": 17,  
  "type": "GreenspaceRecord"}  
 ```  
+#### GreenspaceRecord NGSI-LD normalisé Exemple  
 Voici un exemple d'un GreenspaceRecord au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
