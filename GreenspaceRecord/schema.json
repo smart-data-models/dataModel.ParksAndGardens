@@ -3,7 +3,7 @@
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json",
   "title": "Smart Data Models - Parks and Gardens / Greenspace Record",
-  "description": "This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.). This entity type has been inspired by the AgriParcelRecord entity type defined by the GSMA Harmonized Data Models.",
+  "description": "This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).",
   "type": "object",
   "allOf": [
     {
@@ -19,32 +19,88 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["GreenspaceRecord"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "GreenspaceRecord"
+          ],
+          "description": "Property. NGSI Entity Type: It has to be GreenspaceRecord"
         },
         "dateObserved": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. The date and time of this observation in ISO8601 UTCformat. Model:'https://schema.org/DateTime'"
         },
         "soilTemperature": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. The observed soil temperature in Celsius degrees. Units:'degrees Celsius'. Model:'https://schema.org/Number'"
         },
         "soilMoistureVwc": {
           "type": "number",
           "minimum": 0,
-          "maximum": 1
+          "maximum": 1,
+          "description": "Property. The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one). Model:'https://schema.org/Number'"
         },
         "soilMoistureEc": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m). Units:'Siemens per meter'. Model:'https://schema.org/Number'"
         },
         "refGreenspace": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The garden or flower bed to which this record refers to. Model:'https://schema.org/URL'."
         },
         "refDevice": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The device or devices used to obtain the data expressed by this record. Model:'https://schema.org/URL'."
+        },
+        "refWeatherObserved": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship.  Weather observed associated to the measurements described by this entity. Model:'https://schema.org/URL'."
         }
       }
     }
   ],
-  "required": ["id", "type", "location", "dateObserved"]
+  "required": [
+    "id",
+    "type",
+    "location",
+    "dateObserved"
+  ]
 }

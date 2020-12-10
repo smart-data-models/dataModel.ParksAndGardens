@@ -20,10 +20,11 @@
         "type": {
           "type": "string",
           "enum": ["Garden"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity Type: It has to be Garden"
         },
         "category": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Text'. Garden's category. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Or any other value needed by an application.",
           "minitems": 1,
           "items": {
             "type": "string",
@@ -41,7 +42,9 @@
         },
         "style": {
           "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Garden's style.",
           "enum": [
+            "public",
             "english",
             "french",
             "chinese",
@@ -53,14 +56,17 @@
           ]
         },
         "openingHours": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Opening hours of this garden. Model:'https://schema.org/openingHours'"
         },
         "areaServed": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Higher level area to which the garden belongs to. It can be used to group gardens per responsible, district, neighbourhood, etc. Model:'https://schema.org/Text'"
         },
         "dateLastWatering": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Timestamp which corresponds to the last watering of this garden. Model:'https://schema.org/DateTime'"
         },
         "nextWateringDeadline": {
           "type": "string",
@@ -68,6 +74,7 @@
         },
         "refRecord": {
           "type": "array",
+          "description": "Relationship. List of records which contain measurements related to this\n    garden. Model:'https://schema.org/URL'",
           "items": {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           }
