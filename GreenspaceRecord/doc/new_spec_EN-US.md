@@ -1,50 +1,66 @@
 Entity: GreenspaceRecord  
 ========================  
 This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
-Global description: **This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.). This entity type has been inspired by the AgriParcelRecord entity type defined by the GSMA Harmonized Data Models.**  
+Global description: **This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).**  
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `color`: The color of the product.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`:   - `description`: A description of this item  - `id`:   - `image`: An image of the item.  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refDevice`:   - `refGreenspace`:   - `seeAlso`:   - `soilMoistureEc`:   - `soilMoistureVwc`:   - `soilTemperature`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`: Annotations about the item  - `areaServed`: The geographic area where a service or offered item is provided  - `color`: The color of the product  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTCformat  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `image`: An image of the item  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refDevice`: The device or devices used to obtain the data expressed by this record  - `refGreenspace`: The garden or flower bed to which this record refers to  - `refWeatherObserved`:  Weather observed associated to the measurements described by this entity  - `seeAlso`: list of uri pointing to additional resources about the item  - `soilMoistureEc`: The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m)  - `soilMoistureVwc`: The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)  - `soilTemperature`: The observed soil temperature in Celsius degrees  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be GreenspaceRecord    
 Required properties  
-- `dateObserved`  - `id`  - `location`  - `type`  ## Data Model description of properties  
+- `dateObserved`  - `id`  - `location`  - `type`    
+This entity type has been inspired by the AgriParcelRecord entity type defined by the GSMA Harmonized Data Models.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GreenspaceRecord:    
-  description: 'This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.). This entity type has been inspired by the AgriParcelRecord entity type defined by the GSMA Harmonized Data Models.'    
+  description: 'This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).'    
   properties:    
     address:    
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     annotations:    
+      description: 'Annotations about the item'    
       items:    
         type: string    
-      type: array    
-    areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     color:    
-      description: 'The color of the product.'    
-      type: string    
+      description: 'The color of the product'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/color    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -57,8 +73,11 @@ GreenspaceRecord:
       format: date-time    
       type: Property    
     dateObserved:    
+      description: 'The date and time of this observation in ISO8601 UTCformat'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     description:    
       description: 'A description of this item'    
       type: Property    
@@ -72,10 +91,14 @@ GreenspaceRecord:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     image:    
-      description: 'An image of the item.'    
+      description: 'An image of the item'    
       format: uri    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -230,12 +253,52 @@ GreenspaceRecord:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *greenspacerecord_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refDevice:    
-      anyOf: *greenspacerecord_-_properties_-_owner_-_items_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'The device or devices used to obtain the data expressed by this record'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL.    
     refGreenspace:    
-      anyOf: *greenspacerecord_-_properties_-_owner_-_items_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'The garden or flower bed to which this record refers to'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL.    
+    refWeatherObserved:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: ' Weather observed associated to the measurements described by this entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL.    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -244,22 +307,34 @@ GreenspaceRecord:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     soilMoistureEc:    
-      type: number    
+      description: 'The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Siemens per meter'    
     soilMoistureVwc:    
+      description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'    
       maximum: 1    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     soilTemperature:    
-      type: number    
+      description: 'The observed soil temperature in Celsius degrees'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'degrees Celsius'    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity Type: It has to be GreenspaceRecord'    
       enum:    
         - GreenspaceRecord    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
