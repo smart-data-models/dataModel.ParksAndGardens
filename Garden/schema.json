@@ -70,11 +70,12 @@
         },
         "nextWateringDeadline": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Deadline for next watering operation to be done on this garden. Model:'https://schema.org/DateTime'"
         },
         "refRecord": {
           "type": "array",
-          "description": "Relationship. List of records which contain measurements related to this\n    garden. Model:'https://schema.org/URL'",
+          "description": "Relationship. List of records which contain measurements related to this garden. Model:'https://schema.org/URL'",
           "items": {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           }

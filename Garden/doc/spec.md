@@ -91,8 +91,8 @@ A JSON Schema corresponding to this data model can be found
     -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Optional
 
--   `nextWateringDeadline` : Deadline for next watering operation to be done on
-    this garden.
+-   `nextWateringDeadline` : `Deadline for next watering operation to be done on
+    this garden`.
     -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Optional
 -   `refRecord` : List of records which contain measurements related to this
