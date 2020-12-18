@@ -428,7 +428,7 @@ Garden:
  "type": "Garden"}  
 ```  
 #### Jardin NGSI-LD normalisé Exemple  
-Voici un exemple de jardin en format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de jardin au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
