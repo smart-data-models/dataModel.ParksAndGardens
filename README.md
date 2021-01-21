@@ -4,19 +4,11 @@ These data models are intended to model parks, gardens and related green spaces 
 ### List of data models
 
 The following entity types are available:
-- [FlowerBed](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/README.md). A FlowerBed is a distinguishable planned space, usually outdoors, set aside for
-the display, cultivation, and enjoyment of plants and other forms of nature.
+- [FlowerBed](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/README.md). A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.
 
+- [Garden](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/README.md). A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.
 
-- [Garden](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/README.md). A garden is a distinguishable planned space, usually outdoors, set aside for
-the display, cultivation, and enjoyment of plants and other forms of nature.
-
-
-- [GreenspaceRecord](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/README.md). This entity contains a harmonised description of the conditions recorded on
-a particular area or point inside a greenspace (flower bed, garden, etc.).
-This entity type has been inspired by the AgriParcelRecord entity type
-defined by the GSMA Harmonized Data Models.
-
+- [GreenspaceRecord](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/README.md). This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).
 
 
 
