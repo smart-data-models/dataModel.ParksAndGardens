@@ -2,9 +2,7 @@
 
 ## Description 
 
-A garden is a distinguishable planned space, usually outdoors, set aside for
-the display, cultivation, and enjoyment of plants and other forms of nature.
-
+A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.ParksAndGardens/Garden/swagger.yaml)
