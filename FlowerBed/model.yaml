@@ -1,120 +1,340 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.ParksAndGardens
-
 FlowerBed:
-  required:
-    - id
-    - type
-    - location
-    - name
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
-  type: object
-  description: |
-    A FlowerBed is a distinguishable planned space, usually outdoors, set aside for
-    the display, cultivation, and enjoyment of plants and other forms of nature.
+  description: 'A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.'
   properties:
     address:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
     alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+      description: 'An alternative name for this item'
+      type: Property
     annotations:
-      x-ngsi:
-        type: Property
-      type: array
-      description: 'annotations of this flower bed.'
+      description: 'Annotations about the item'
       items:
         type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'areaServed of this flower bed.'
+        model: https://schema.org/Text
     category:
-      x-ngsi:
-        type: Property
-      type: array
-      description: 'Category of this flower bed.'
+      description: 'Category of this flower bed. Enum:''hedge, lawnArea, portable, urbanTreeSpot''. Or any extended value needed by the application.'
       items:
-        type: string
         enum:
-          - public
-          - private
-          - botanical
-          - castle
-          - community
-          - monastary
-          - residential
-          - fencedOff
+          - hedge
+          - lawnArea
+          - portable
+          - urbanTreeSpot
+        type: string
+      minItems: 1
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     color:
+      description: 'The color of the product'
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+        model: https://schema.org/color
     dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
-    dateLastWatering:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
       format: date-time
+      type: Property
+    dateLastWatering:
+      description: 'Timestamp which corresponds to the last watering of the flower bed.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    depth:
+      description: 'Depth of this flower bed.'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/depth
     description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+      description: 'A description of this item'
+      type: Property
+    height:
+      description: 'Heigth of this flower bed.'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/heigth
+    id:
+      anyOf: &flowerbed_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     image:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
+      description: 'An image of the item'
       format: uri
-    location:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
-    name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
-    nextWateringDeadline:
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
+        model: https://schema.org/URL
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    name:
+      description: 'The name of this item.'
+      type: Property
+    nextWateringDeadline:
       description: 'Deadline for next watering operation.'
       format: date-time
-    openingHours:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
     owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
-    refRecord:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *flowerbed_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
+    refGarden:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Flower bed''s garden (if it belongs to any).'
+      type: Relationship
       x-ngsi:
-        type: Relationship
-      type: array
-      description: 'List of records which contain measurements related to this flower bed.'
-      items: &ref_0
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+        model: https://schema.org/URL
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    shape:
+      description: 'Shape of this flower bed. Enum:''rectangular, square, elliptic, polygonal, circular''. Or any other required by an application.'
+      items:
+        enum:
+          - rectangular
+          - square
+          - elliptic
+          - polygon
+          - circular
+        type: string
+      minItems: 1
+      type: Property
+      uniqueItems: true
+      x-ngsi:
+        model: https://schema.org/depth
     source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
-    style:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    taxon:
+      description: 'Used to indicate the biological [taxon](http://en.wikipedia.org/wiki/en:taxon) to which the trees, or plants in the flower bed belong'
+      items:
+        type: string
+      minItems: 1
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+        model: https://schema.org/Text
+    type:
+      description: 'NGSI Entity Type: It has to be FlowerBed'
+      enum:
+        - FlowerBed
+      type: Property
+    width:
+      description: 'Width of this flower bed.'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/width
+  required:
+    - id
+    - location
+    - type
+  type: object
