@@ -2,11 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised description of the conditions recorded on
-a particular area or point inside a greenspace (flower bed, garden, etc.).
-This entity type has been inspired by the AgriParcelRecord entity type
-defined by the GSMA Harmonized Data Models.
-
+This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.ParksAndGardens/GreenspaceRecord/swagger.yaml)
