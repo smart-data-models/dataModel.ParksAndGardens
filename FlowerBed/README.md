@@ -2,9 +2,7 @@
 
 ## Description 
 
-A FlowerBed is a distinguishable planned space, usually outdoors, set aside for
-the display, cultivation, and enjoyment of plants and other forms of nature.
-
+A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/swagger.yaml)
