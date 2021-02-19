@@ -100,7 +100,7 @@
           "maximum": 1,
           "description": "Property. Model:'https://schema.org/Number'. Percentage of the surface covered with litter or other waste materials"
         },
-        "areaOccupation": {
+        "areaOccupancy": {
           "type": "string",
           "enum": ["high", "medium", "low", "none"],
           "description": "Property. Model:'https://schema.org/Text'. Enum:'high, medium, low, none'. Level high is over 80% of allowed attendance, medium ranges between 80% and 20%, low between 0 and 20% and none when nobody is present"
