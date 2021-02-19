@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "dateObserved__@type_", "dateObserved__@value_", "id_", "location__coordinates__0_", "location__coordinates__1_", "location__type_", "refGreenspace_", "relativeHumidity_", "soilTemperature_", "temperature_", "type_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "DateTime", "2019-01-15T12:00:00Z", "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1", "-3.7836974", "43.4741091", "Point", "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio", "0.87", "13", "17", "GreenspaceRecord"
