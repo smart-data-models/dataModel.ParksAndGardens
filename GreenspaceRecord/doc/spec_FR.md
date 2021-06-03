@@ -1,46 +1,46 @@
 Entité : GreenspaceRecord  
 =========================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée des conditions enregistrées sur une zone ou un point particulier à l'intérieur d'un espace vert (plate-bande, jardin, etc.).**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Cette entité contient une description harmonisée des conditions enregistrées sur une zone ou un point particulier à l'intérieur d'un espace vert (parterre, jardin, etc.).**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`: Annotations sur le sujet  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`: La date et l'heure de cette observation au format ISO8601 UTC  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'objet  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel ce document se réfère  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `soilMoistureEc`: L'humidité douce observée mesurée en tant que conductivité électrique, CE en unités Siemens par mètre (S/m)  - `soilMoistureVwc`: L'humidité du sol observée, mesurée en tant que teneur volumétrique en eau, VWC (pourcentage, exprimé en parties pour un)  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: La date et l'heure de cette observation en format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `litterCoverage`: Pourcentage de la surface couverte de détritus ou d'autres déchets  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `soilMoistureEc`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  - `soilMoistureVwc`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
 Propriétés requises  
 - `dateObserved`  - `id`  - `location`  - `type`    
-Ce type d'entité a été inspiré du type d'entité AgriParcelRecord défini par les modèles de données harmonisés de la GSMA.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+Ce type d'entité a été inspiré par le type d'entité AgriParcelRecord défini par les modèles de données harmonisés du GSMA.  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GreenspaceRecord:    
   description: 'This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -99,11 +99,18 @@ GreenspaceRecord:
       type: Property    
       x-ngsi:    
         model: https://schema.org/URL    
+    litterCoverage:    
+      description: 'Percentage of the surface covered with litter or other waste materials'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -123,7 +130,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -146,7 +154,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -171,7 +180,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -193,7 +203,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -218,7 +229,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -245,7 +257,7 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -301,8 +313,8 @@ GreenspaceRecord:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -344,8 +356,8 @@ GreenspaceRecord:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### GreenspaceRecord NGSI V2 Exemple de valeurs clés  
-Voici un exemple d'un GreenspaceRecord au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### GreenspaceRecord Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de GreenspaceRecord au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -361,8 +373,8 @@ GreenspaceRecord:
   "dateObserved": "2019-01-15T12:00:00Z"  
 }  
 ```  
-#### GreenspaceRecord NGSI V2 normalisé Exemple  
-Voici un exemple d'un GreenspaceRecord au format JSON tel que normalisé. Il est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GreenspaceRecord NGSI-v2 normalisé Exemple  
+Voici un exemple de GreenspaceRecord au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -393,62 +405,75 @@ GreenspaceRecord:
   }  
 }  
 ```  
-#### GreenspaceRecord NGSI-LD valeurs clés Exemple  
-Voici un exemple d'un GreenspaceRecord au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "dateObserved": {"@type": "DateTime", "@value": "2019-01-15T12:00:00Z"},  
- "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
- "location": {"coordinates": [-3.7836974, 43.4741091], "type": "Point"},  
- "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
- "relativeHumidity": 0.87,  
- "soilTemperature": 13,  
- "temperature": 17,  
- "type": "GreenspaceRecord"}  
-```  
-#### GreenspaceRecord NGSI-LD normalisé Exemple  
-Voici un exemple d'un GreenspaceRecord au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### GreenspaceRecord Valeurs clés NGSI-LD Exemple  
+Voici un exemple de GreenspaceRecord au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-    "type": "GreenspaceRecord",  
-    "refGreenspace": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
-    },  
-    "temperature": {  
-        "type": "Property",  
-        "value": 17  
-    },  
-    "soilTemperature": {  
-        "type": "Property",  
-        "value": 13  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -3.7836974,  
-                43.4741091  
-            ]  
-        }  
-    },  
-    "relativeHumidity": {  
-        "type": "Property",  
-        "value": 0.87  
-    },  
-    "dateObserved": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2019-01-15T12:00:00Z"  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+  "type": "GreenspaceRecord",  
+  "refGreenspace": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
+  },  
+  "temperature": {  
+    "type": "Property",  
+    "value": 17  
+  },  
+  "soilTemperature": {  
+    "type": "Property",  
+    "value": 13  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.7836974,  
+        43.4741091  
+      ]  
+    }  
+  },  
+  "relativeHumidity": {  
+    "type": "Property",  
+    "value": 0.87  
+  },  
+  "dateObserved": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2019-01-15T12:00:00Z"  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### GreenspaceRecord NGSI-LD normalisé Exemple  
+Voici un exemple de GreenspaceRecord au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "dateObserved": {  
+    "@type": "DateTime",  
+    "@value": "2019-01-15T12:00:00Z"  
+  },  
+  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+  "location": {  
+    "coordinates": [  
+      -3.7836974,  
+      43.4741091  
+    ],  
+    "type": "Point"  
+  },  
+  "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
+  "relativeHumidity": 0.87,  
+  "soilTemperature": 13,  
+  "temperature": 17,  
+  "type": "GreenspaceRecord"  
 }  
 ```  
