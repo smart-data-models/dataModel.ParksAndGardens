@@ -1,44 +1,44 @@
 Entité : FlowerBed  
 ==================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
-Description globale : **Une parcelle de jardin dans laquelle des fleurs (ou d'autres plantes) sont cultivées. En général, vous trouverez des plates-bandes dans les parcs, les jardins, les zones piétonnes ou les grands échangeurs routiers.  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Terrain de jardin dans lequel on cultive des fleurs (ou d'autres plantes). On trouve généralement des parterres de fleurs dans les parcs, les jardins, les zones piétonnes ou aux grands échangeurs d'autoroute.**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`: Annotations sur le sujet  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de ce parterre de fleurs. Enum : "haie, pelouseAire, portable, urbanTreeSpot". Ou toute valeur étendue nécessaire à l'application.  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateLastWatering`: Horodatage qui correspond au dernier arrosage du parterre de fleurs.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `depth`: Profondeur de ce parterre de fleurs.  - `description`: Une description de cet article  - `height`: Hauteur de ce parterre de fleurs.  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'objet  - `location`:   - `name`: Le nom de cet article.  - `nextWateringDeadline`: Date limite pour la prochaine opération d'arrosage.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refGarden`: Le jardin du parterre de fleurs (s'il en existe un).  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `shape`: Forme de ce parterre de fleurs. Enum : "rectangulaire, carré, elliptique, polygonal, circulaire". Ou tout autre élément requis par une demande.  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `taxon`: Utilisé pour indiquer le [taxon] biologique (http://en.wikipedia.org/wiki/en:taxon) auquel appartiennent les arbres ou les plantes dans la plate-bande  - `type`: Type d'entité NGSI : Il doit s'agir de FlowerBed  - `width`: Largeur de ce parterre de fleurs.    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de ce parterre de fleurs. Enum : 'hedge, lawnArea, portable, urbanTreeSpot'. Ou toute autre valeur étendue requise par l'application.  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateLastWatering`: Horodatage qui correspond au dernier arrosage du parterre.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `depth`: Profondeur de ce parterre de fleurs.  - `description`: Une description de cet article  - `height`: Hauteur de cette plate-bande.  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `nextWateringDeadline`: Date limite pour le prochain arrosage.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refGarden`: Le jardin du parterre de fleurs (s'il en fait partie).  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `shape`: Forme de ce parterre de fleurs. Enum : 'rectangulaire, carré, elliptique, polygonal, circulaire'. Ou toute autre forme requise par une application.  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `taxon`: Utilisé pour indiquer le [taxon] biologique (http://en.wikipedia.org/wiki/en:taxon) auquel appartiennent les arbres ou les plantes de la plate-bande.  - `type`: Type d'entité NGSI : Il faut que ce soit FlowerBed  - `width`: Largeur de ce parterre de fleurs.    
 Propriétés requises  
-- `id`  - `location`  - `type`  ## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+- `id`  - `location`  - `type`  ## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FlowerBed:    
   description: 'A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -123,10 +123,10 @@ FlowerBed:
       x-ngsi:    
         model: https://schema.org/URL    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -146,7 +146,8 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -169,7 +170,8 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -194,7 +196,8 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -216,7 +219,8 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -241,7 +245,8 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -268,7 +273,7 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -302,8 +307,8 @@ FlowerBed:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -354,8 +359,8 @@ FlowerBed:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### FlowerBed NGSI V2 valeurs clés Exemple  
-Voici un exemple d'un lit de fleurs au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### FlowerBed NGSI-v2 valeurs-clés Exemple  
+Voici un exemple d'un lit de fleurs au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -375,8 +380,8 @@ FlowerBed:
   "soilMoistureVwc": 0.85  
 }  
 ```  
-#### FlowerBed NGSI V2 normalisé Exemple  
-Voici un exemple de lit de fleurs au format JSON normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### FlowerBed NGSI-v2 normalisé Exemple  
+Voici un exemple d'un lit de fleurs au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -411,73 +416,90 @@ FlowerBed:
   }  
 }  
 ```  
-#### FlowerBed NGSI-LD valeurs clés Exemple  
-Voici un exemple d'un lit de fleurs au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "address": {"addressCountry": "Spain",  
-             "adressLocality": "Valladolid",  
-             "streetAddress": "Paseo Zorrilla, 122",  
-             "type": "PostalAddress"},  
- "category": ["urbanTreeSpot"],  
- "dateLastWatering": {"@type": "DateTime", "@value": "2017-03-31T08:00:00Z"},  
- "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
- "location": {"coordinates": [-4.743187, 41.627999], "type": "Point"},  
- "soilMoistureVwc": 0.85,  
- "soilTemperature": 17,  
- "type": "FlowerBed"}  
-```  
-#### FlowerBed NGSI-LD normalisé Exemple  
-Voici un exemple d'un lit de fleurs au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### FlowerBed Valeurs-clés NGSI-LD Exemple  
+Voici un exemple d'un lit de fleurs au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
-    "type": "FlowerBed",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "urbanTreeSpot"  
-        ]  
-    },  
-    "soilMoistureVwc": {  
-        "type": "Property",  
-        "value": 0.85  
-    },  
-    "dateLastWatering": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2017-03-31T08:00:00Z"  
-        }  
-    },  
-    "soilTemperature": {  
-        "type": "Property",  
-        "value": 17  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "Spain",  
-            "streetAddress": "Paseo Zorrilla, 122",  
-            "adressLocality": "Valladolid",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -4.743187,  
-                41.627999  
-            ]  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+  "type": "FlowerBed",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "urbanTreeSpot"  
     ]  
+  },  
+  "soilMoistureVwc": {  
+    "type": "Property",  
+    "value": 0.85  
+  },  
+  "dateLastWatering": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-03-31T08:00:00Z"  
+    }  
+  },  
+  "soilTemperature": {  
+    "type": "Property",  
+    "value": 17  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "Spain",  
+      "streetAddress": "Paseo Zorrilla, 122",  
+      "adressLocality": "Valladolid",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -4.743187,  
+        41.627999  
+      ]  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
 }  
 ```  
-Il existe deux options pour représenter les mesures observées. A) Par le biais d'une entité liée de type "GreenSpaceRecord" (attribut nommé "record"). B) Par un groupe de propriétés de mesure déjà définies par [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md). Il s'agit ici de la description de l'attribut à utiliser pour l'option `refRecord` ; Liste des enregistrements qui contiennent des mesures relatives à cette plate-bande. Type d'attribut ; Relation. Liste des références aux entités du type "GreenSpaceRecord".  
+#### FlowerBed NGSI-LD normalisé Exemple  
+Voici un exemple d'un FlowerBed au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "address": {  
+    "addressCountry": "Spain",  
+    "adressLocality": "Valladolid",  
+    "streetAddress": "Paseo Zorrilla, 122",  
+    "type": "PostalAddress"  
+  },  
+  "category": [  
+    "urbanTreeSpot"  
+  ],  
+  "dateLastWatering": {  
+    "@type": "DateTime",  
+    "@value": "2017-03-31T08:00:00Z"  
+  },  
+  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+  "location": {  
+    "coordinates": [  
+      -4.743187,  
+      41.627999  
+    ],  
+    "type": "Point"  
+  },  
+  "soilMoistureVwc": 0.85,  
+  "soilTemperature": 17,  
+  "type": "FlowerBed"  
+}  
+```  
+Il existe deux options pour représenter les mesures observées. A) Par une entité liée de type `GreenspaceRecord` (attribut nommé `refRecord`). B) Par un groupe de propriétés de mesures déjà définies par [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md). Voici la description de l'attribut à utiliser pour l'option `refRecord` ; Liste des enregistrements qui contiennent des mesures liées à cette plate-bande. Type d'attribut ; Relation. Liste des références aux entités de type `GreenspaceRecord`.  
