@@ -1,11 +1,12 @@
 Entität: GreenspaceRecord  
 =========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung der Bedingungen, die auf einer bestimmten Fläche oder an einem bestimmten Punkt innerhalb einer Grünfläche (Blumenbeet, Garten usw.) erfasst wurden.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refDevice`: Das Gerät oder die Geräte, die verwendet wurden, um die durch diesen Datensatz ausgedrückten Daten zu erhalten  - `refGreenspace`: Der Garten oder das Blumenbeet, auf den/das sich dieser Datensatz bezieht  - `refWeatherObserved`:  Beobachtetes Wetter im Zusammenhang mit den von dieser Entität beschriebenen Messungen  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `soilMoistureEc`: Die beobachtete Bodenfeuchte, gemessen als elektrische Leitfähigkeit, EC in Einheiten von Siemens pro Meter (S/m)  - `soilMoistureVwc`: Die beobachtete Bodenfeuchte, gemessen als volumetrischer Wassergehalt, VWC (Prozentsatz, ausgedrückt in Teilen pro eins)  - `soilTemperature`: Die beobachtete Bodentemperatur in Celsius-Graden  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-Entitätstyp: Es muss GreenspaceRecord sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `litterCoverage`: Prozentualer Anteil der Oberfläche, der mit Abfällen oder anderen Abfallstoffen bedeckt ist  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refDevice`: Das Gerät oder die Geräte, die verwendet wurden, um die durch diesen Datensatz ausgedrückten Daten zu erhalten  - `refGreenspace`: Der Garten oder das Blumenbeet, auf den/das sich dieser Datensatz bezieht  - `refWeatherObserved`:  Beobachtetes Wetter im Zusammenhang mit den von dieser Entität beschriebenen Messungen  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `soilMoistureEc`: Die beobachtete Bodenfeuchte, gemessen als elektrische Leitfähigkeit, EC in Einheiten von Siemens pro Meter (S/m)  - `soilMoistureVwc`: Die beobachtete Bodenfeuchte, gemessen als volumetrischer Wassergehalt, VWC (Prozentsatz, ausgedrückt in Teilen pro eins)  - `soilTemperature`: Die beobachtete Bodentemperatur in Celsius-Graden  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-Entitätstyp: Es muss GreenspaceRecord sein    
 Erforderliche Eigenschaften  
 - `dateObserved`  - `id`  - `location`  - `type`    
 Dieser Entitätstyp wurde durch den Entitätstyp AgriParcelRecord inspiriert, der von den GSMA Harmonized Data Models definiert wurde.  
@@ -17,30 +18,29 @@ GreenspaceRecord:
   description: 'This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -99,11 +99,18 @@ GreenspaceRecord:
       type: Property    
       x-ngsi:    
         model: https://schema.org/URL    
+    litterCoverage:    
+      description: 'Percentage of the surface covered with litter or other waste materials'    
+      maximum: 1    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -123,7 +130,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -146,7 +154,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -171,7 +180,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -193,7 +203,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -218,7 +229,8 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -245,7 +257,7 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -301,8 +313,8 @@ GreenspaceRecord:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
