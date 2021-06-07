@@ -1,0 +1,276 @@
+{
+    "@id": "dtmi:com:ngsi-ld:Garden;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Parks and Gardens / Garden adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/Garden/schema.json",
+    "description": "A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.",
+    "displayName": "Garden",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Higher level area to which the garden belongs to. It can be used to group gardens per responsible, district, neighbourhood, etc"
+        },
+        {
+            "name": "color",
+            "writable": true,
+            "displayName": "color",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The color of the product"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateLastWatering",
+            "writable": true,
+            "displayName": "dateLastWatering",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp which corresponds to the last watering of this garden"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "image",
+            "writable": true,
+            "displayName": "image",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An image of the item"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "nextWateringDeadline",
+            "writable": true,
+            "displayName": "nextWateringDeadline",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Deadline for next watering operation to be done on this garden"
+        },
+        {
+            "name": "openingHours",
+            "writable": true,
+            "displayName": "openingHours",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Opening hours of this garden"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "annotations",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Annotations about the item",
+            "displayName": "annotations"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "category",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Garden's category. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Or any other value needed by an application.",
+            "displayName": "category"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "refRecord",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of records which contain measurements related to this garden",
+            "displayName": "refRecord"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "style",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "public",
+                        "displayName": "public",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "english",
+                        "displayName": "english",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "french",
+                        "displayName": "french",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "chinese",
+                        "displayName": "chinese",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "japanese",
+                        "displayName": "japanese",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "zen",
+                        "displayName": "zen",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "rosarium",
+                        "displayName": "rosarium",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "herb_garden",
+                        "displayName": "herb_garden",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "kitchen",
+                        "displayName": "kitchen",
+                        "enumValue": 9
+                    }
+                ]
+            }
+        }
+    ]
+}
