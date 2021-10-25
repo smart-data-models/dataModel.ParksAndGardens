@@ -6,7 +6,7 @@ Version: 0.0.1
 A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/FlowerBed/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/doc/spec.md)
 
