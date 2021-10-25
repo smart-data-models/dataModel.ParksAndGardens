@@ -6,7 +6,7 @@ Version: 0.0.1
 A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/Garden/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/doc/spec.md)
 
