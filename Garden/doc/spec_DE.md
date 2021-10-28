@@ -2,11 +2,11 @@ Entität: Garten
 ===============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Ein Garten ist ein abgrenzbarer geplanter Raum, meist im Freien, der für die Ausstellung, den Anbau und den Genuss von Pflanzen und anderen Formen der Natur eingerichtet ist.**  
+Globale Beschreibung: **Ein Garten ist ein planmäßig angelegter Raum, in der Regel im Freien, der der Ausstellung, der Pflege und dem Genuss von Pflanzen und anderen Formen der Natur gewidmet ist.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Übergeordneter Bereich, zu dem der Garten gehört. Es kann verwendet werden, um Gärten pro Verantwortlichem, Bezirk, Nachbarschaft, etc. zu gruppieren  - `category`: Die Kategorie des Gartens. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Oder jeder andere Wert, der von einer Anwendung benötigt wird.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateLastWatering`: Zeitstempel, der der letzten Bewässerung dieses Gartens entspricht  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `nextWateringDeadline`: Termin für die nächste Bewässerungsaktion in diesem Garten  - `openingHours`: Öffnungszeiten dieses Gartens  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refRecord`: Liste der Datensätze, die Messungen in Bezug auf diesen Garten enthalten  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Stil des Gartens.  - `type`: NGSI-Entitätstyp: Es muss Garten sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Übergeordnetes Gebiet, zu dem der Garten gehört. Es kann verwendet werden, um Gärten nach Verantwortlichem, Bezirk, Nachbarschaft usw. zu gruppieren.  - `category`: Die Kategorie des Gartens. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Oder jeder andere Wert, der von einer Anwendung benötigt wird.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastWatering`: Zeitstempel, der der letzten Bewässerung dieses Gartens entspricht  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `nextWateringDeadline`: Frist für die nächste Bewässerungsaktion in diesem Garten  - `openingHours`: Öffnungszeiten dieses Gartens  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refRecord`: Liste der Datensätze, die Messungen in Bezug auf diesen Garten enthalten  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Stil des Gartens.  - `type`: NGSI-Entitätstyp: Es muss Garten sein    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `name`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,24 +36,29 @@ Garden:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     annotations:    
       description: 'Annotations about the item'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     areaServed:    
       description: 'Higher level area to which the garden belongs to. It can be used to group gardens per responsible, district, neighbourhood, etc'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Garden''s category. Enum:''public, private, botanical, castle, community, monastery, residential, fencedOff''. Or any other value needed by an application.'    
       items:    
@@ -68,34 +73,45 @@ Garden:
           - fencedOff    
         type: string    
       minitems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     color:    
       description: 'The color of the product'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/color    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateLastWatering:    
       description: 'Timestamp which corresponds to the last watering of this garden'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &garden_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -107,13 +123,15 @@ Garden:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     image:    
       description: 'An image of the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -265,35 +283,43 @@ Garden:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     nextWateringDeadline:    
       description: 'Deadline for next watering operation to be done on this garden'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     openingHours:    
       description: 'Opening hours of this garden'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/openingHours    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *garden_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refRecord:    
       description: 'List of records which contain measurements related to this garden'    
       items:    
         anyOf: *garden_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -304,10 +330,13 @@ Garden:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     style:    
       description: 'Enum:''public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen''. Garden''s style.'    
       enum:    
@@ -320,14 +349,17 @@ Garden:
         - rosarium    
         - herb_garden    
         - kitchen    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be Garden'    
       enum:    
         - Garden    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -337,8 +369,8 @@ Garden:
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
-#### Garten NGSI-v2-Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen Garten im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Garten NGSI-v2 Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für einen Garten im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio",  
@@ -363,7 +395,7 @@ Garden:
 }  
 ```  
 #### Garten NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Garten im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und gibt die Kontextdaten einer einzelnen Entität zurück.  
+Hier ist ein Beispiel für einen Garten im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio",  
@@ -411,8 +443,8 @@ Garden:
   }  
 }  
 ```  
-#### Garten NGSI-LD-Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen Garten im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Garten NGSI-LD Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für einen Garten im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
@@ -482,7 +514,7 @@ Garden:
 }  
 ```  
 #### Garten NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen Garten im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Garten im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  
