@@ -2,11 +2,11 @@ Entität: FlowerBed
 ==================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Ein Gartengrundstück, in dem Blumen (oder andere Pflanzen) angebaut werden. Normalerweise findet man Blumenbeete in Parks, Gärten, Fußgängerzonen oder an großen Autobahnkreuzen.**  
+Globale Beschreibung: **Ein Gartengrundstück, auf dem Blumen (oder andere Pflanzen) angebaut werden. Normalerweise findet man Blumenbeete in Parks, Gärten, Fußgängerzonen oder an großen Autobahnkreuzen.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie dieses Blumenbeetes. Enum:'hedge, lawnArea, portable, urbanTreeSpot'. Oder ein beliebiger erweiterter Wert, der von der Anwendung benötigt wird.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateLastWatering`: Zeitstempel, der der letzten Bewässerung des Blumenbeets entspricht.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `depth`: Tiefe dieses Blumenbeetes.  - `description`: Eine Beschreibung dieses Artikels  - `height`: Höhe dieses Blumenbeetes.  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `nextWateringDeadline`: Termin für den nächsten Bewässerungsvorgang.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refGarden`: Garten des Blumenbeets (wenn es zu einem gehört).  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `shape`: Form dieses Blumenbeetes. Enum:'rechteckig, quadratisch, elliptisch, polygonal, kreisförmig'. Oder jede andere, die von einer Anwendung benötigt wird.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `taxon`: Wird verwendet, um das biologische [Taxon] (http://en.wikipedia.org/wiki/en:taxon) anzugeben, zu dem die Bäume oder Pflanzen im Blumenbeet gehören  - `type`: NGSI-Entitätstyp: Es muss FlowerBed sein  - `width`: Breite dieses Blumenbeetes.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie dieses Blumenbeets. Enum:'hedge, lawnArea, portable, urbanTreeSpot'. Oder ein beliebiger erweiterter Wert, der von der Anwendung benötigt wird.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastWatering`: Zeitstempel, der der letzten Bewässerung des Blumenbeetes entspricht.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `depth`: Tiefe dieses Blumenbeetes.  - `description`: Eine Beschreibung dieses Artikels  - `height`: Höhe dieses Blumenbeetes.  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `nextWateringDeadline`: Frist für die nächste Bewässerungsaktion.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refGarden`: Garten des Blumenbeets (falls es zu einem gehört).  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `shape`: Form dieses Blumenbeetes. Enum:'rechteckig, quadratisch, elliptisch, polygonal, rund'. Oder jede andere von einer Anwendung benötigte Form.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `taxon`: Dient zur Angabe des biologischen [Taxons] (http://en.wikipedia.org/wiki/en:taxon), zu dem die Bäume oder Pflanzen im Blumenbeet gehören  - `type`: NGSI-Entitätstyp: Es muss FlowerBed sein  - `width`: Breite dieses Blumenbeetes.    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,24 +36,29 @@ FlowerBed:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     annotations:    
       description: 'Annotations about the item'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category of this flower bed. Enum:''hedge, lawnArea, portable, urbanTreeSpot''. Or any extended value needed by the application.'    
       items:    
@@ -64,46 +69,59 @@ FlowerBed:
           - urbanTreeSpot    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     color:    
       description: 'The color of the product'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/color    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateLastWatering:    
       description: 'Timestamp which corresponds to the last watering of the flower bed.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     depth:    
       description: 'Depth of this flower bed.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/depth    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     height:    
       description: 'Heigth of this flower bed.'    
       minimum: 0    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/heigth    
+        type: Property    
     id:    
       anyOf: &flowerbed_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -115,13 +133,15 @@ FlowerBed:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     image:    
       description: 'An image of the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -273,22 +293,28 @@ FlowerBed:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     nextWateringDeadline:    
       description: 'Deadline for next watering operation.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *flowerbed_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refGarden:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -300,9 +326,9 @@ FlowerBed:
           format: uri    
           type: string    
       description: 'Flower bed''s garden (if it belongs to any).'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -313,7 +339,8 @@ FlowerBed:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     shape:    
       description: 'Shape of this flower bed. Enum:''rectangular, square, elliptic, polygonal, circular''. Or any other required by an application.'    
       items:    
@@ -325,32 +352,39 @@ FlowerBed:
           - circular    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: https://schema.org/depth    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     taxon:    
       description: 'Used to indicate the biological [taxon](http://en.wikipedia.org/wiki/en:taxon) to which the trees, or plants in the flower bed belong'    
       items:    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be FlowerBed'    
       enum:    
         - FlowerBed    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     width:    
       description: 'Width of this flower bed.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/width    
+        type: Property    
   required:    
     - id    
     - location    
@@ -360,7 +394,7 @@ FlowerBed:
 </details>    
 ## Beispiel-Nutzlasten  
 #### FlowerBed NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -381,7 +415,7 @@ FlowerBed:
 }  
 ```  
 #### FlowerBed NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -417,7 +451,7 @@ FlowerBed:
 }  
 ```  
 #### FlowerBed NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
@@ -469,7 +503,7 @@ FlowerBed:
 }  
 ```  
 #### FlowerBed NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FlowerBed im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  
@@ -502,4 +536,4 @@ FlowerBed:
   "type": "FlowerBed"  
 }  
 ```  
-Es gibt zwei Möglichkeiten, beobachtete Messungen darzustellen. A) Durch eine verknüpfte Entität vom Typ `GreenspaceRecord` (Attribut namens `refRecord`). B) Durch eine Gruppe von Messeigenschaften, die bereits durch [GreenspaceRecord] definiert sind (../../GreenspaceRecord/doc/spec.md). Hier ist die Beschreibung des Attributs für die Option `refRecord`; Liste der Datensätze, die Messungen in Bezug auf dieses Beet enthalten. Attribut-Typ; Beziehung. Liste von Referenzen auf Entitäten vom Typ `GreenspaceRecord`  
+Für die Darstellung der beobachteten Messungen gibt es zwei Möglichkeiten. A) Durch eine verknüpfte Entität vom Typ `GreenspaceRecord` (Attribut namens `refRecord`). B) Durch eine Gruppe von Messeigenschaften, die bereits durch [GreenspaceRecord] definiert sind (../../GreenspaceRecord/doc/spec.md). Hier die Beschreibung des Attributs, das für die Option `refRecord` zu verwenden ist; Liste der Datensätze, die Messungen in Bezug auf dieses Blumenbeet enthalten. Attributtyp; Beziehung. Liste der Verweise auf Entitäten des Typs `GreenspaceRecord`  
