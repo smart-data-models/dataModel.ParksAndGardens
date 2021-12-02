@@ -537,3 +537,5 @@ FlowerBed:
 }  
 ```  
 Il existe deux options pour représenter les mesures observées. A) Par une entité liée de type `GreenspaceRecord` (attribut nommé `refRecord`). B) Par un groupe de propriétés de mesures déjà définies par [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md). Voici la description de l'attribut à utiliser pour l'option `refRecord` ; Liste des enregistrements qui contiennent des mesures liées à cette plate-bande. Type d'attribut ; Relation. Liste des références aux entités de type `GreenspaceRecord`.  
+
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
