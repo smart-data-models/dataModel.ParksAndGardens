@@ -537,3 +537,5 @@ FlowerBed:
 }  
 ```  
 観測された測定値を表現するには2つのオプションがあります。A) `GreenspaceRecord` 型のリンクされたエンティティ (属性名は `refRecord`) を通じて。B) [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md)で既に定義されている測定プロパティのグループを介して。ここでは、オプション `refRecord` に使用する属性の説明を示します; List of records that contain measurements related to this flower bed.属性の種類; 関係。タイプ `GreenspaceRecord` のエンティティへの参照のリスト  
+
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
