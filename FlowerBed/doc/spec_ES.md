@@ -537,3 +537,5 @@ FlowerBed:
 }  
 ```  
 Existen dos opciones para representar las mediciones observadas. A) A través de una entidad vinculada de tipo `GreenspaceRecord` (atributo denominado `refRecord`). B) A través de un grupo de propiedades de medición ya definidas por [GreenspaceRecord] (../../GreenspaceRecord/doc/spec.md). Aquí está la descripción del atributo que se utilizará para la opción `refRecord`; Lista de registros que contienen mediciones relacionadas con este parterre. Tipo de atributo; Relación. Lista de referencias a entidades del tipo `GreenspaceRecord`.  
+
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
