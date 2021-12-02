@@ -537,3 +537,5 @@ FlowerBed:
 }  
 ```  
 Ci sono due opzioni per rappresentare le misure osservate. A) Attraverso un'entità collegata di tipo `GreenspaceRecord` (attributo denominato `refRecord`). B) Attraverso un gruppo di proprietà di misura già definite da [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md). Ecco la descrizione dell'attributo da utilizzare per l'opzione `refRecord`; Lista di record che contengono misurazioni relative a questa aiuola. Tipo di attributo; Relazione. Elenco di riferimenti a entità di tipo `GreenspaceRecord`.  
+
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
