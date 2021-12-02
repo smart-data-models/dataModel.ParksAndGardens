@@ -537,3 +537,5 @@ FlowerBed:
 }  
 ```  
 There are two options for representing measurements observed. A) Through a linked entity of type `GreenspaceRecord` (attribute named `refRecord`). B) Through a group of measurement properties already defined by [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md). Here it is the description of the attribute to be used for option `refRecord`; List of records which contain measurements related to this                 flower bed. Attribute type; Relationship. List of references to entities of type `GreenspaceRecord`  
+
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
