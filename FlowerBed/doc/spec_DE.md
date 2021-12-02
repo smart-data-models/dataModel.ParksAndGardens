@@ -537,3 +537,5 @@ FlowerBed:
 }  
 ```  
 Für die Darstellung der beobachteten Messungen gibt es zwei Möglichkeiten. A) Durch eine verknüpfte Entität vom Typ `GreenspaceRecord` (Attribut namens `refRecord`). B) Durch eine Gruppe von Messeigenschaften, die bereits durch [GreenspaceRecord] definiert sind (../../GreenspaceRecord/doc/spec.md). Hier die Beschreibung des Attributs, das für die Option `refRecord` zu verwenden ist; Liste der Datensätze, die Messungen in Bezug auf dieses Blumenbeet enthalten. Attributtyp; Beziehung. Liste der Verweise auf Entitäten des Typs `GreenspaceRecord`  
+
+Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
