@@ -1,36 +1,35 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "address": {
-    "addressLocality": "Santander",
-    "postalCode": "39005",
-    "streetAddress": "Avenida Casta\u00f1eda",
-    "type": "PostalAddress"
-  },
-  "areaServed": "El Sardinero",
-  "category": [
-    "public"
-  ],
-  "dateLastWatering": {
-    "@type": "DateTime",
-    "@value": "2017-03-31T08:00:00Z"
-  },
-  "description": "Jardines de Piquio. Zona El Sardinero",
-  "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",
-  "location": {
-    "coordinates": [
-      -3.7836974,
-      43.4741091
+    "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",
+    "type": "Garden",
+    "address": {
+        "addressLocality": "Santander",
+        "postalCode": "39005",
+        "streetAddress": "Avenida Casta\u00f1eda",
+        "type": "PostalAddress"
+    },
+    "areaServed": "El Sardinero",
+    "category": [
+        "public"
     ],
-    "type": "Point"
-  },
-  "name": "Jardines de Piquio",
-  "openingHours": "Mo-Su",
-  "refRecord": [
-    "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"
-  ],
-  "style": "french",
-  "type": "Garden"
+    "dateLastWatering": {
+        "@type": "DateTime",
+        "@value": "2017-03-31T08:00:00Z"
+    },
+    "description": "Jardines de Piquio. Zona El Sardinero",
+    "location": {
+        "coordinates": [
+            -3.7836974,
+            43.4741091
+        ],
+        "type": "Point"
+    },
+    "name": "Jardines de Piquio",
+    "openingHours": "Mo-Su",
+    "refRecord": [
+        "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"
+    ],
+    "style": "french",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
