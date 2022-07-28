@@ -1,15 +1,17 @@
-エンティティフラワーベッド  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティフラワーベッド  
 =============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**花（または他の植物）を栽培するための庭の区画。通常、花壇は公園や庭園、歩行者天国、大きな高速道路のインターチェンジなどで見られる。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな説明。**花（または他の植物）が栽培されている庭の区画。通常、公園や庭園、歩行者天国、大きな高速道路のインターチェンジなどで花壇を見かけることができる。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: この花壇のカテゴリ。Enum:'hedges, lawnArea, portable, urbanTreeSpot'.または、アプリケーションが必要とする任意の拡張値。  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastWatering`: 花壇に最後に水を撒いた時のタイムスタンプ。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `depth`: この花壇の深さ。  - `description`: このアイテムの説明  - `height`: この花壇の高さ。  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `nextWateringDeadline`: 次回の散水作業の締め切り  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refGarden`: フラワーベッドの庭（もしそれが何かに属していれば）。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `shape`: この花壇の形状。Enum:'rectangular, square, elliptic, polygonal, circular'.または、アプリケーションで必要とされるその他のもの。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `taxon`: 樹木や花壇の植物が属する生物学的な[taxon](http://en.wikipedia.org/wiki/en:taxon)を示すのに使用されます。  - `type`: NGSI エンティティ・タイプ。It has to be FlowerBed  - `width`: この花壇の幅。    
-必須項目  
-- `id`  - `location`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `category`: この花壇のカテゴリ。Enum:'hedge, lawnArea, portable, urbanTreeSpot'（生垣、芝生、携帯用、都市型ツリースポット）。または、アプリケーションで必要とされる任意の拡張値。  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastWatering`: 花壇の最後の水やりに対応するタイムスタンプ。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `depth`: この花壇の奥行き。  - `description`: このアイテムの説明  - `height`: この花壇の高さ  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `nextWateringDeadline`: 次回の散水作業の締切日  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refGarden`: 花壇の庭（もしそれが何かに属していれば）。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `shape`: この花壇の形状。Enum:'rectangular, square, elliptic, polygonal, circular'.または、アプリケーションで必要とされるその他のもの。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `taxon`: 花壇の木や植物が属する生物学的な[分類群](http://en.wikipedia.org/wiki/en:taxon)を示すために使用されます。  - `type`: NGSIエンティティタイプ。FlowerBedでなければならない  - `width`: この花壇の幅。    
+必要なプロパティ  
+- `id`  - `location`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FlowerBed:    
@@ -390,11 +392,17 @@ FlowerBed:
     - location    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### FlowerBed NGSI-v2 キーバリューの例  
-FlowerBedをkey-valuesとしてJSON-LD形式で表示した例です。これは`options=keyValues`を使うとNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返すことができます。  
+#### FlowerBed NGSI-v2 key-value の例。  
+ここでは、FlowerBedをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -414,8 +422,8 @@ FlowerBed:
   "soilMoistureVwc": 0.85  
 }  
 ```  
-#### FlowerBed NGSI-v2規格化例  
-正規化されたJSON-LD形式のFlowerBedの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### FlowerBed NGSI-v2 正規化例  
+以下は、FlowerBed を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -450,92 +458,90 @@ FlowerBed:
   }  
 }  
 ```  
-#### FlowerBed NGSI-LDのキーバリューの例  
-FlowerBedをkey-valuesとしてJSON-LD形式で表示した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### FlowerBed NGSI-LD キー値の例  
+ここでは、FlowerBedをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
-  "type": "FlowerBed",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "urbanTreeSpot"  
+    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+    "type": "FlowerBed",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "Spain",  
+            "streetAddress": "Paseo Zorrilla, 122",  
+            "adressLocality": "Valladolid",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "urbanTreeSpot"  
+        ]  
+    },  
+    "dateLastWatering": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-03-31T08:00:00Z"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.743187,  
+                41.627999  
+            ]  
+        }  
+    },  
+    "soilMoistureVwc": {  
+        "type": "Property",  
+        "value": 0.85  
+    },  
+    "soilTemperature": {  
+        "type": "Property",  
+        "value": 17  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
     ]  
-  },  
-  "soilMoistureVwc": {  
-    "type": "Property",  
-    "value": 0.85  
-  },  
-  "dateLastWatering": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-03-31T08:00:00Z"  
-    }  
-  },  
-  "soilTemperature": {  
-    "type": "Property",  
-    "value": 17  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "Spain",  
-      "streetAddress": "Paseo Zorrilla, 122",  
-      "adressLocality": "Valladolid",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.743187,  
-        41.627999  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### FlowerBed NGSI-LDの正規化例  
-正規化されたJSON-LD形式のFlowerBedの例を示します。これはオプションを使わない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### FlowerBed NGSI-LD 正規化例  
+以下は、FlowerBed を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "Spain",  
-    "adressLocality": "Valladolid",  
-    "streetAddress": "Paseo Zorrilla, 122",  
-    "type": "PostalAddress"  
-  },  
-  "category": [  
-    "urbanTreeSpot"  
-  ],  
-  "dateLastWatering": {  
-    "@type": "DateTime",  
-    "@value": "2017-03-31T08:00:00Z"  
-  },  
-  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
-  "location": {  
-    "coordinates": [  
-      -4.743187,  
-      41.627999  
+    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+    "type": "FlowerBed",  
+    "address": {  
+        "addressCountry": "Spain",  
+        "adressLocality": "Valladolid",  
+        "streetAddress": "Paseo Zorrilla, 122",  
+        "type": "PostalAddress"  
+    },  
+    "category": [  
+        "urbanTreeSpot"  
     ],  
-    "type": "Point"  
-  },  
-  "soilMoistureVwc": 0.85,  
-  "soilTemperature": 17,  
-  "type": "FlowerBed"  
+    "dateLastWatering": {  
+        "@type": "DateTime",  
+        "@value": "2017-03-31T08:00:00Z"  
+    },  
+    "location": {  
+        "coordinates": [  
+            -4.743187,  
+            41.627999  
+        ],  
+        "type": "Point"  
+    },  
+    "soilMoistureVwc": 0.85,  
+    "soilTemperature": 17,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-観測された測定値を表現するには2つのオプションがあります。A) `GreenspaceRecord` 型のリンクされたエンティティ (属性名は `refRecord`) を通じて。B) [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md)で既に定義されている測定プロパティのグループを介して。ここでは、オプション `refRecord` に使用する属性の説明を示します; List of records that contain measurements related to this flower bed.属性の種類; 関係。タイプ `GreenspaceRecord` のエンティティへの参照のリスト  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+観測された測定値を表現するために、2つのオプションがある。A) `GreenspaceRecord` 型のリンクされたエンティティ (属性名 `refRecord`) を使用する。B) [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md) ですでに定義されている測定値のプロパティのグループを通して表現する。ここでは、オプション `refRecord` で使用される属性の説明です; この花壇に関連する測定値を含むレコードのリストです。属性タイプ; Relationship.タイプ `GreenspaceRecord` のエンティティへの参照のリスト。  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
