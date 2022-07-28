@@ -1,8 +1,10 @@
-Entity: GreenspaceRecord  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: GreenspaceRecord  
 ========================  
 [Open License](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -384,6 +386,12 @@ GreenspaceRecord:
     - location    
     - dateObserved    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -440,73 +448,71 @@ GreenspaceRecord:
 Here is an example of a GreenspaceRecord in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-  "type": "GreenspaceRecord",  
-  "refGreenspace": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 17  
-  },  
-  "soilTemperature": {  
-    "type": "Property",  
-    "value": 13  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.7836974,  
-        43.4741091  
-      ]  
-    }  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 0.87  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2019-01-15T12:00:00Z"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+    "type": "GreenspaceRecord",  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2019-01-15T12:00:00Z"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.7836974,  
+                43.4741091  
+            ]  
+        }  
+    },  
+    "refGreenspace": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 0.87  
+    },  
+    "soilTemperature": {  
+        "type": "Property",  
+        "value": 13  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 17  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### GreenspaceRecord NGSI-LD normalized Example    
 Here is an example of a GreenspaceRecord in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "dateObserved": {  
-    "@type": "DateTime",  
-    "@value": "2019-01-15T12:00:00Z"  
-  },  
-  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-  "location": {  
-    "coordinates": [  
-      -3.7836974,  
-      43.4741091  
-    ],  
-    "type": "Point"  
-  },  
-  "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
-  "relativeHumidity": 0.87,  
-  "soilTemperature": 13,  
-  "temperature": 17,  
-  "type": "GreenspaceRecord"  
+    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+    "type": "GreenspaceRecord",  
+    "dateObserved": {  
+        "@type": "DateTime",  
+        "@value": "2019-01-15T12:00:00Z"  
+    },  
+    "location": {  
+        "coordinates": [  
+            -3.7836974,  
+            43.4741091  
+        ],  
+        "type": "Point"  
+    },  
+    "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
+    "relativeHumidity": 0.87,  
+    "soilTemperature": 13,  
+    "temperature": 17,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
