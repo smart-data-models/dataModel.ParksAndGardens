@@ -1,12 +1,14 @@
-Entidad: Jardín  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: Jardín  
 ===============  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Un jardín es un espacio planificado distinguible, generalmente al aire libre, destinado a la exhibición, cultivo y disfrute de las plantas y otras formas de la naturaleza.**  
+Descripción global: **Un jardín es un espacio planificado distinguible, generalmente al aire libre, destinado a la exhibición, el cultivo y el disfrute de las plantas y otras formas de la naturaleza.**  
+versión: 0.0.1  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: Área de nivel superior a la que pertenece el jardín. Puede utilizarse para agrupar jardines por responsable, distrito, barrio, etc.  - `category`: Categoría del jardín. Enum:'público, privado, botánico, castillo, comunitario, monasterio, residencial, fencedOff'. O cualquier otro valor que necesite una aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastWatering`: Marca de tiempo que corresponde al último riego de este jardín  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `nextWateringDeadline`: Fecha límite para el próximo riego de este jardín  - `openingHours`: Horario de apertura de este jardín  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRecord`: Lista de registros que contienen medidas relacionadas con este jardín  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Estilo del jardín.  - `type`: Tipo de entidad NGSI: Tiene que ser Jardín    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: Área de nivel superior a la que pertenece el jardín. Puede utilizarse para agrupar jardines por responsable, distrito, barrio, etc.  - `category`: Categoría del jardín. Enum:'público, privado, botánico, castillo, comunitario, monasterio, residencial, fencedOff'. O cualquier otro valor que necesite una aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastWatering`: Marca de tiempo que corresponde al último riego de este jardín  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `nextWateringDeadline`: Fecha límite para la próxima operación de riego de este jardín  - `openingHours`: Horario de apertura de este jardín  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRecord`: Lista de registros que contienen medidas relacionadas con este jardín  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Estilo del jardín.  - `type`: Tipo de entidad NGSI: Tiene que ser Jardín    
 Propiedades requeridas  
 - `id`  - `location`  - `name`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -366,6 +368,12 @@ Garden:
     - location    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -447,111 +455,109 @@ Garden:
 Aquí hay un ejemplo de un Jardín en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
-  "type": "Garden",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "public"  
+    "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
+    "type": "Garden",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Santander",  
+            "postalCode": "39005",  
+            "streetAddress": "Avenida Casta\u00f1eda",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "El Sardinero"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "public"  
+        ]  
+    },  
+    "dateLastWatering": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-03-31T08:00:00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Jardines de Piquio. Zona El Sardinero"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.7836974,  
+                43.4741091  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Jardines de Piquio"  
+    },  
+    "openingHours": {  
+        "type": "Property",  
+        "value": "Mo-Su"  
+    },  
+    "refRecord": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
+        ]  
+    },  
+    "style": {  
+        "type": "Property",  
+        "value": "french"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
     ]  
-  },  
-  "style": {  
-    "type": "Property",  
-    "value": "french"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Jardines de Piquio. Zona El Sardinero"  
-  },  
-  "dateLastWatering": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-03-31T08:00:00Z"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.7836974,  
-        43.4741091  
-      ]  
-    }  
-  },  
-  "refRecord": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
-    ]  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "El Sardinero"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Santander",  
-      "postalCode": "39005",  
-      "streetAddress": "Avenida Casta\u00f1eda",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "openingHours": {  
-    "type": "Property",  
-    "value": "Mo-Su"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Jardines de Piquio"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
 #### Jardín NGSI-LD normalizado Ejemplo  
 He aquí un ejemplo de un Jardín en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressLocality": "Santander",  
-    "postalCode": "39005",  
-    "streetAddress": "Avenida Casta\u00f1eda",  
-    "type": "PostalAddress"  
-  },  
-  "areaServed": "El Sardinero",  
-  "category": [  
-    "public"  
-  ],  
-  "dateLastWatering": {  
-    "@type": "DateTime",  
-    "@value": "2017-03-31T08:00:00Z"  
-  },  
-  "description": "Jardines de Piquio. Zona El Sardinero",  
-  "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
-  "location": {  
-    "coordinates": [  
-      -3.7836974,  
-      43.4741091  
+    "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
+    "type": "Garden",  
+    "address": {  
+        "addressLocality": "Santander",  
+        "postalCode": "39005",  
+        "streetAddress": "Avenida Casta\u00f1eda",  
+        "type": "PostalAddress"  
+    },  
+    "areaServed": "El Sardinero",  
+    "category": [  
+        "public"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Jardines de Piquio",  
-  "openingHours": "Mo-Su",  
-  "refRecord": [  
-    "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
-  ],  
-  "style": "french",  
-  "type": "Garden"  
+    "dateLastWatering": {  
+        "@type": "DateTime",  
+        "@value": "2017-03-31T08:00:00Z"  
+    },  
+    "description": "Jardines de Piquio. Zona El Sardinero",  
+    "location": {  
+        "coordinates": [  
+            -3.7836974,  
+            43.4741091  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Jardines de Piquio",  
+    "openingHours": "Mo-Su",  
+    "refRecord": [  
+        "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
+    ],  
+    "style": "french",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
