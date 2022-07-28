@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "$id": "https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json",
     "title": "Smart Data Models - Parks and Gardens / Garden",
     "description": "A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.",
@@ -27,18 +27,18 @@
                 "category": {
                     "type": "array",
                     "description": "Property. Model:'https://schema.org/Text'. Garden's category. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Or any other value needed by an application.",
-                    "minitems": 1,
+                    "minItems": 1,
                     "items": {
                         "type": "string",
                         "enum": [
-                            "public",
-                            "private",
                             "botanical",
                             "castle",
                             "community",
+                            "fencedOff",
                             "monastary",
-                            "residential",
-                            "fencedOff"
+                            "private",
+                            "public",
+                            "residential"
                         ]
                     }
                 },
@@ -46,15 +46,15 @@
                     "type": "string",
                     "description": "Property. Model:'https://schema.org/Text'. Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Garden's style.",
                     "enum": [
-                        "public",
+                        "chinese",
                         "english",
                         "french",
-                        "chinese",
-                        "japanese",
-                        "zen",
-                        "rosarium",
                         "herb_garden",
-                        "kitchen"
+                        "japanese",
+                        "kitchen",
+                        "public",
+                        "rosarium",
+                        "zen"
                     ]
                 },
                 "openingHours": {
@@ -87,8 +87,6 @@
     ],
     "required": [
         "id",
-        "type",
-        "location",
-        "name"
+        "type"
     ]
 }
