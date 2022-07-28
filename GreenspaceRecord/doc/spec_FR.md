@@ -6,7 +6,7 @@ Entité : GreenspaceRecord
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: La date et l'heure de cette observation en format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `litterCoverage`: Pourcentage de la surface couverte de détritus ou d'autres déchets  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `soilMoistureEc`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  - `soilMoistureVwc`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: La date et l'heure de cette observation en format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `litterCoverage`: Pourcentage de la surface couverte de détritus ou d'autres déchets  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codés JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `soilMoistureEc`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  - `soilMoistureVwc`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
 Propriétés requises  
 - `dateObserved`  - `id`  - `location`  - `type`    
 Ce type d'entité a été inspiré par le type d'entité AgriParcelRecord défini par les modèles de données harmonisés du GSMA.  
@@ -38,49 +38,64 @@ GreenspaceRecord:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     annotations:    
       description: 'Annotations about the item'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     color:    
       description: 'The color of the product'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/color    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateObserved:    
       description: 'The date and time of this observation in ISO8601 UTCformat'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &greenspacerecord_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -92,20 +107,23 @@ GreenspaceRecord:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     image:    
       description: 'An image of the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     litterCoverage:    
       description: 'Percentage of the surface covered with litter or other waste materials'    
       maximum: 1    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -257,16 +275,21 @@ GreenspaceRecord:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *greenspacerecord_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refDevice:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -278,9 +301,9 @@ GreenspaceRecord:
           format: uri    
           type: string    
       description: 'The device or devices used to obtain the data expressed by this record'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL.    
+        type: Relationship    
     refGreenspace:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -292,9 +315,9 @@ GreenspaceRecord:
           format: uri    
           type: string    
       description: 'The garden or flower bed to which this record refers to'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL.    
+        type: Relationship    
     refWeatherObserved:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -306,9 +329,9 @@ GreenspaceRecord:
           format: uri    
           type: string    
       description: ' Weather observed associated to the measurements described by this entity'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL.    
+        type: Relationship    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -319,34 +342,42 @@ GreenspaceRecord:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     soilMoistureEc:    
       description: 'The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m)'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'Siemens per meter'    
     soilMoistureVwc:    
       description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'    
       maximum: 1    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     soilTemperature:    
       description: 'The observed soil temperature in Celsius degrees'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'degrees Celsius'    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity Type: It has to be GreenspaceRecord'    
       enum:    
         - GreenspaceRecord    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -405,7 +436,7 @@ GreenspaceRecord:
   }  
 }  
 ```  
-#### GreenspaceRecord Valeurs clés NGSI-LD Exemple  
+#### GreenspaceRecord Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de GreenspaceRecord au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
@@ -477,3 +508,5 @@ GreenspaceRecord:
   "type": "GreenspaceRecord"  
 }  
 ```  
+
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.

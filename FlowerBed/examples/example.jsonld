@@ -1,48 +1,48 @@
 {
-  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",
-  "type": "FlowerBed",
-  "category": {
-    "type": "Property",
-    "value": [
-      "urbanTreeSpot"
+    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",
+    "type": "FlowerBed",
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "Spain",
+            "streetAddress": "Paseo Zorrilla, 122",
+            "adressLocality": "Valladolid",
+            "type": "PostalAddress"
+        }
+    },
+    "category": {
+        "type": "Property",
+        "value": [
+            "urbanTreeSpot"
+        ]
+    },
+    "dateLastWatering": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-03-31T08:00:00Z"
+        }
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.743187,
+                41.627999
+            ]
+        }
+    },
+    "soilMoistureVwc": {
+        "type": "Property",
+        "value": 0.85
+    },
+    "soilTemperature": {
+        "type": "Property",
+        "value": 17
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"
     ]
-  },
-  "soilMoistureVwc": {
-    "type": "Property",
-    "value": 0.85
-  },
-  "dateLastWatering": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2017-03-31T08:00:00Z"
-    }
-  },
-  "soilTemperature": {
-    "type": "Property",
-    "value": 17
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "addressCountry": "Spain",
-      "streetAddress": "Paseo Zorrilla, 122",
-      "adressLocality": "Valladolid",
-      "type": "PostalAddress"
-    }
-  },
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -4.743187,
-        41.627999
-      ]
-    }
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }

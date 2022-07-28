@@ -1,19 +1,19 @@
-Entidad: FlowerBed  
-==================  
-[Licencia abierta](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
-[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Una parcela de jardín en la que se cultivan flores (u otras plantas). Normalmente se encuentran parterres en parques, jardines, zonas peatonales o en grandes intercambios de carreteras.**  
+エンティティガーデン  
+==========  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**庭園とは、植物やその他の自然の形態を展示したり、栽培したり、楽しんだりするために設けられた、通常屋外にある特徴的な計画された空間のことである。  
 
-## Lista de propiedades  
+## プロパティのリスト  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este parterre. Enum:'seto, área de césped, portátil, mancha arbórea urbana'. O cualquier valor extendido que necesite la aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastWatering`: Marca de tiempo que corresponde al último riego del parterre.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth`: La profundidad de este parterre.  - `description`: Una descripción de este artículo  - `height`: Altura de este parterre.  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `nextWateringDeadline`: Fecha límite para la próxima operación de riego.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refGarden`: Jardín de la cama de flores (si pertenece a alguna).  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `shape`: Forma de este parterre. Enum:'rectangular, cuadrada, elíptica, poligonal, circular'. O cualquier otra requerida por una aplicación.  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `taxon`: Se utiliza para indicar el [taxón] biológico (http://en.wikipedia.org/wiki/en:taxon) al que pertenecen los árboles o las plantas del parterre  - `type`: Tipo de entidad NGSI: Tiene que ser FlowerBed  - `width`: La anchura de este parterre.    
-Propiedades requeridas  
-- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: 庭園が所属する上位のエリア。責任者ごと、地区ごと、近隣ごとなどに庭園をグループ化するのに使用できます。  - `category`: 庭園のカテゴリ。Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'.または、アプリケーションが必要とするその他の値。  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastWatering`: この庭に最後に水を撒いた時のタイムスタンプ  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `nextWateringDeadline`: この庭で次回の水やり作業を行う期限  - `openingHours`: この庭園の開園時間  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refRecord`: この庭に関連する測定値を含むレコードのリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'.庭園のスタイル。  - `type`: NGSIのエンティティタイプ。ガーデンでなければならない    
+必須項目  
+- `id`  - `location`  - `name`  - `type`  ## データモデルによるプロパティの記述  
+アルファベット順（クリックすると詳細が表示されます  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
-FlowerBed:    
-  description: 'A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.'    
+Garden:    
+  description: 'A garden is a distinguishable planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature.'    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -54,21 +54,25 @@ FlowerBed:
         model: https://schema.org/Text    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: 'Higher level area to which the garden belongs to. It can be used to group gardens per responsible, district, neighbourhood, etc'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     category:    
-      description: 'Category of this flower bed. Enum:''hedge, lawnArea, portable, urbanTreeSpot''. Or any extended value needed by the application.'    
+      description: 'Garden''s category. Enum:''public, private, botanical, castle, community, monastery, residential, fencedOff''. Or any other value needed by an application.'    
       items:    
         enum:    
-          - hedge    
-          - lawnArea    
-          - portable    
-          - urbanTreeSpot    
+          - public    
+          - private    
+          - botanical    
+          - castle    
+          - community    
+          - monastary    
+          - residential    
+          - fencedOff    
         type: string    
-      minItems: 1    
+      minitems: 1    
       type: array    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -91,7 +95,7 @@ FlowerBed:
       x-ngsi:    
         type: Property    
     dateLastWatering:    
-      description: 'Timestamp which corresponds to the last watering of the flower bed.'    
+      description: 'Timestamp which corresponds to the last watering of this garden'    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -103,27 +107,13 @@ FlowerBed:
       type: string    
       x-ngsi:    
         type: Property    
-    depth:    
-      description: 'Depth of this flower bed.'    
-      minimum: 0    
-      type: number    
-      x-ngsi:    
-        model: https://schema.org/depth    
-        type: Property    
     description:    
       description: 'A description of this item'    
       type: string    
       x-ngsi:    
         type: Property    
-    height:    
-      description: 'Heigth of this flower bed.'    
-      minimum: 0    
-      type: string    
-      x-ngsi:    
-        model: https://schema.org/heigth    
-        type: Property    
     id:    
-      anyOf: &flowerbed_-_properties_-_owner_-_items_-_anyof    
+      anyOf: &garden_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -301,31 +291,32 @@ FlowerBed:
       x-ngsi:    
         type: Property    
     nextWateringDeadline:    
-      description: 'Deadline for next watering operation.'    
+      description: 'Deadline for next watering operation to be done on this garden'    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
+    openingHours:    
+      description: 'Opening hours of this garden'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/openingHours    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *flowerbed_-_properties_-_owner_-_items_-_anyof    
+        anyOf: *garden_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Property    
-    refGarden:    
-      anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          format: uri    
-          type: string    
-      description: 'Flower bed''s garden (if it belongs to any).'    
+    refRecord:    
+      description: 'List of records which contain measurements related to this garden'    
+      items:    
+        anyOf: *garden_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: array    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
@@ -341,130 +332,136 @@ FlowerBed:
           type: string    
       x-ngsi:    
         type: Property    
-    shape:    
-      description: 'Shape of this flower bed. Enum:''rectangular, square, elliptic, polygonal, circular''. Or any other required by an application.'    
-      items:    
-        enum:    
-          - rectangular    
-          - square    
-          - elliptic    
-          - polygon    
-          - circular    
-        type: string    
-      minItems: 1    
-      type: array    
-      uniqueItems: true    
-      x-ngsi:    
-        model: https://schema.org/depth    
-        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: string    
       x-ngsi:    
         type: Property    
-    taxon:    
-      description: 'Used to indicate the biological [taxon](http://en.wikipedia.org/wiki/en:taxon) to which the trees, or plants in the flower bed belong'    
-      items:    
-        type: string    
-      minItems: 1    
-      type: array    
+    style:    
+      description: 'Enum:''public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen''. Garden''s style.'    
+      enum:    
+        - public    
+        - english    
+        - french    
+        - chinese    
+        - japanese    
+        - zen    
+        - rosarium    
+        - herb_garden    
+        - kitchen    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity Type: It has to be FlowerBed'    
+      description: 'NGSI Entity Type: It has to be Garden'    
       enum:    
-        - FlowerBed    
+        - Garden    
       type: string    
       x-ngsi:    
         type: Property    
-    width:    
-      description: 'Width of this flower bed.'    
-      minimum: 0    
-      type: number    
-      x-ngsi:    
-        model: https://schema.org/width    
-        type: Property    
   required:    
     - id    
-    - location    
     - type    
+    - location    
+    - name    
   type: object    
 ```  
 </details>    
-## Ejemplo de carga útil  
-#### FlowerBed NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un FlowerBed en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+## ペイロードの例  
+#### ガーデンNGSI-v2のキーバリューの例  
+Key-ValuesとしてJSON-LD形式のGardenの例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "FlowerBed-345",  
-  "type": "FlowerBed",  
-  "category": ["urbanTreeSpot"],  
-  "dateLastWatering": "2017-03-31T08:00:00Z",  
-  "address": {  
-    "streetAddress": "Paseo Zorrilla, 122",  
-    "adressLocality": "Valladolid",  
-    "addressCountry": "Spain"  
-  },  
+  "id": "Santander-Garden-Piquio",  
+  "type": "Garden",  
+  "name": "Jardines de Piquio",  
+  "description": "Jardines de Piquio. Zona El Sardinero",  
   "location": {  
     "type": "Point",  
-    "coordinates": [-4.743187, 41.627999]  
+    "coordinates": [-3.7836974, 43.4741091]  
   },  
-  "soilTemperature": 17,  
-  "soilMoistureVwc": 0.85  
+  "address": {  
+    "streetAddress": "Avenida Castañeda",  
+    "addressLocality": "Santander",  
+    "postalCode": "39005"  
+  },  
+  "openingHours": "Mo-Su",  
+  "style": "french",  
+  "category": ["public"],  
+  "areaServed": "El Sardinero",  
+  "dateLastWatering": "2017-03-31T08:00:00Z",  
+  "refRecord": ["Santander-Garden-Piquio-Record-1"]  
 }  
 ```  
-#### FlowerBed NGSI-v2 normalizado Ejemplo  
-He aquí un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### 庭 NGSI-v2 正規化例  
+ここでは、正規化されたJSON-LD形式のGardenの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "FlowerBed-345",  
-  "type": "FlowerBed",  
+  "id": "Santander-Garden-Piquio",  
+  "type": "Garden",  
   "category": {  
-    "value": ["urbanTreeSpot"]  
+    "value": ["public"]  
   },  
-  "soilMoistureVwc": {  
-    "value": 0.85  
+  "style": {  
+    "value": "french"  
+  },  
+  "description": {  
+    "value": "Jardines de Piquio. Zona El Sardinero"  
   },  
   "dateLastWatering": {  
     "type": "DateTime",  
     "value": "2017-03-31T08:00:00Z"  
   },  
-  "soilTemperature": {  
-    "value": 17  
-  },  
-  "address": {  
-    "type": "PostalAddress",  
-    "value": {  
-      "addressCountry": "Spain",  
-      "streetAddress": "Paseo Zorrilla, 122",  
-      "adressLocality": "Valladolid"  
-    }  
-  },  
   "location": {  
     "type": "geo:json",  
     "value": {  
       "type": "Point",  
-      "coordinates": [-4.743187, 41.627999]  
+      "coordinates": [-3.7836974, 43.4741091]  
     }  
+  },  
+  "refRecord": {  
+    "type": "Relationship",  
+    "value": ["Santander-Garden-Piquio-Record-1"]  
+  },  
+  "areaServed": {  
+    "value": "El Sardinero"  
+  },  
+  "address": {  
+    "type": "PostalAddress",  
+    "value": {  
+      "addressLocality": "Santander",  
+      "postalCode": "39005",  
+      "streetAddress": "Avenida Casta\u00f1eda"  
+    }  
+  },  
+  "openingHours": {  
+    "value": "Mo-Su"  
+  },  
+  "name": {  
+    "value": "Jardines de Piquio"  
   }  
 }  
 ```  
-#### FlowerBed NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un FlowerBed en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### ガーデンNGSI-LDのキーバリューの例  
+ここでは、Key-ValuesとしてJSON-LD形式のGardenの例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
-  "type": "FlowerBed",  
+  "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
+  "type": "Garden",  
   "category": {  
     "type": "Property",  
     "value": [  
-      "urbanTreeSpot"  
+      "public"  
     ]  
   },  
-  "soilMoistureVwc": {  
+  "style": {  
     "type": "Property",  
-    "value": 0.85  
+    "value": "french"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Jardines de Piquio. Zona El Sardinero"  
   },  
   "dateLastWatering": {  
     "type": "Property",  
@@ -473,28 +470,42 @@ FlowerBed:
       "@value": "2017-03-31T08:00:00Z"  
     }  
   },  
-  "soilTemperature": {  
-    "type": "Property",  
-    "value": 17  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "Spain",  
-      "streetAddress": "Paseo Zorrilla, 122",  
-      "adressLocality": "Valladolid",  
-      "type": "PostalAddress"  
-    }  
-  },  
   "location": {  
     "type": "GeoProperty",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        -4.743187,  
-        41.627999  
+        -3.7836974,  
+        43.4741091  
       ]  
     }  
+  },  
+  "refRecord": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
+    ]  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "El Sardinero"  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Santander",  
+      "postalCode": "39005",  
+      "streetAddress": "Avenida Casta\u00f1eda",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "openingHours": {  
+    "type": "Property",  
+    "value": "Mo-Su"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Jardines de Piquio"  
   },  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
@@ -502,8 +513,8 @@ FlowerBed:
   ]  
 }  
 ```  
-#### FlowerBed NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### 庭 NGSI-LDの正規化例  
+正規化されたJSON-LD形式のGardenの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "@context": [  
@@ -511,31 +522,36 @@ FlowerBed:
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ],  
   "address": {  
-    "addressCountry": "Spain",  
-    "adressLocality": "Valladolid",  
-    "streetAddress": "Paseo Zorrilla, 122",  
+    "addressLocality": "Santander",  
+    "postalCode": "39005",  
+    "streetAddress": "Avenida Casta\u00f1eda",  
     "type": "PostalAddress"  
   },  
+  "areaServed": "El Sardinero",  
   "category": [  
-    "urbanTreeSpot"  
+    "public"  
   ],  
   "dateLastWatering": {  
     "@type": "DateTime",  
     "@value": "2017-03-31T08:00:00Z"  
   },  
-  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+  "description": "Jardines de Piquio. Zona El Sardinero",  
+  "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
   "location": {  
     "coordinates": [  
-      -4.743187,  
-      41.627999  
+      -3.7836974,  
+      43.4741091  
     ],  
     "type": "Point"  
   },  
-  "soilMoistureVwc": 0.85,  
-  "soilTemperature": 17,  
-  "type": "FlowerBed"  
+  "name": "Jardines de Piquio",  
+  "openingHours": "Mo-Su",  
+  "refRecord": [  
+    "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
+  ],  
+  "style": "french",  
+  "type": "Garden"  
 }  
 ```  
-Existen dos opciones para representar las mediciones observadas. A) A través de una entidad vinculada de tipo `GreenspaceRecord` (atributo denominado `refRecord`). B) A través de un grupo de propiedades de medición ya definidas por [GreenspaceRecord] (../../GreenspaceRecord/doc/spec.md). Aquí está la descripción del atributo que se utilizará para la opción `refRecord`; Lista de registros que contienen mediciones relacionadas con este parterre. Tipo de atributo; Relación. Lista de referencias a entidades del tipo `GreenspaceRecord`.  
 
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。

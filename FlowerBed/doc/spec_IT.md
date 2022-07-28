@@ -1,15 +1,15 @@
-Entidad: FlowerBed  
-==================  
-[Licencia abierta](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
-[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Una parcela de jardín en la que se cultivan flores (u otras plantas). Normalmente se encuentran parterres en parques, jardines, zonas peatonales o en grandes intercambios de carreteras.**  
+Entità: FlowerBed  
+=================  
+[Licenza aperta](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Un appezzamento di giardino in cui si coltivano fiori (o altre piante). Di solito si trovano aiuole nei parchi, nei giardini, nelle aree pedonali o nei grandi svincoli autostradali.  
 
-## Lista de propiedades  
+## Elenco delle proprietà  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este parterre. Enum:'seto, área de césped, portátil, mancha arbórea urbana'. O cualquier valor extendido que necesite la aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastWatering`: Marca de tiempo que corresponde al último riego del parterre.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth`: La profundidad de este parterre.  - `description`: Una descripción de este artículo  - `height`: Altura de este parterre.  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `nextWateringDeadline`: Fecha límite para la próxima operación de riego.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refGarden`: Jardín de la cama de flores (si pertenece a alguna).  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `shape`: Forma de este parterre. Enum:'rectangular, cuadrada, elíptica, poligonal, circular'. O cualquier otra requerida por una aplicación.  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `taxon`: Se utiliza para indicar el [taxón] biológico (http://en.wikipedia.org/wiki/en:taxon) al que pertenecen los árboles o las plantas del parterre  - `type`: Tipo de entidad NGSI: Tiene que ser FlowerBed  - `width`: La anchura de este parterre.    
-Propiedades requeridas  
-- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `annotations`: Annotazioni sull'elemento  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `category`: Categoria di questa aiuola. Enum:'hedge, lawnArea, portable, urbanTreeSpot'. O qualsiasi valore esteso necessario all'applicazione.  - `color`: Il colore del prodotto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateLastWatering`: Timestamp che corrisponde all'ultima irrigazione dell'aiuola.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `depth`: Profondità di questa aiuola.  - `description`: Una descrizione di questo articolo  - `height`: Altezza di questa aiuola.  - `id`: Identificatore unico dell'entità  - `image`: Un'immagine dell'oggetto  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `nextWateringDeadline`: Termine ultimo per la prossima irrigazione.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `refGarden`: Giardino dell'aiuola (se appartiene a qualcuno).  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `shape`: Forma di questa aiuola. Enum:'rettangolare, quadrata, ellittica, poligonale, circolare'. O qualsiasi altro richiesto da un'applicazione.  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `taxon`: Usato per indicare il [taxon](http://en.wikipedia.org/wiki/en:taxon) biologico al quale appartengono gli alberi o le piante dell'aiuola  - `type`: Tipo di entità NGSI: Deve essere FlowerBed  - `width`: Larghezza di questa aiuola.    
+Proprietà richieste  
+- `id`  - `location`  - `type`  ## Descrizione del modello di dati delle proprietà  
+Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FlowerBed:    
@@ -392,9 +392,9 @@ FlowerBed:
   type: object    
 ```  
 </details>    
-## Ejemplo de carga útil  
-#### FlowerBed NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un FlowerBed en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+## Esempio di payloads  
+#### FlowerBed NGSI-v2 valori chiave Esempio  
+Ecco un esempio di un FlowerBed in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -414,8 +414,8 @@ FlowerBed:
   "soilMoistureVwc": 0.85  
 }  
 ```  
-#### FlowerBed NGSI-v2 normalizado Ejemplo  
-He aquí un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### FlowerBed NGSI-v2 normalizzato Esempio  
+Ecco un esempio di un FlowerBed in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -450,8 +450,8 @@ FlowerBed:
   }  
 }  
 ```  
-#### FlowerBed NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un FlowerBed en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### FlowerBed NGSI-LD valori-chiave Esempio  
+Ecco un esempio di un FlowerBed in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
@@ -502,8 +502,8 @@ FlowerBed:
   ]  
 }  
 ```  
-#### FlowerBed NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### FlowerBed NGSI-LD normalizzato Esempio  
+Ecco un esempio di un FlowerBed in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "@context": [  
@@ -536,6 +536,6 @@ FlowerBed:
   "type": "FlowerBed"  
 }  
 ```  
-Existen dos opciones para representar las mediciones observadas. A) A través de una entidad vinculada de tipo `GreenspaceRecord` (atributo denominado `refRecord`). B) A través de un grupo de propiedades de medición ya definidas por [GreenspaceRecord] (../../GreenspaceRecord/doc/spec.md). Aquí está la descripción del atributo que se utilizará para la opción `refRecord`; Lista de registros que contienen mediciones relacionadas con este parterre. Tipo de atributo; Relación. Lista de referencias a entidades del tipo `GreenspaceRecord`.  
+Ci sono due opzioni per rappresentare le misure osservate. A) Attraverso un'entità collegata di tipo `GreenspaceRecord` (attributo denominato `refRecord`). B) Attraverso un gruppo di proprietà di misura già definite da [GreenspaceRecord](../../GreenspaceRecord/doc/spec.md). Ecco la descrizione dell'attributo da utilizzare per l'opzione `refRecord`; Lista di record che contengono misurazioni relative a questa aiuola. Tipo di attributo; Relazione. Elenco di riferimenti a entità di tipo `GreenspaceRecord`.  
 
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
