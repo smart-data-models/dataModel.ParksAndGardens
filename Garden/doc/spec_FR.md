@@ -1,8 +1,10 @@
-Entité : Garden  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Garden  
 ===============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Un jardin est un espace planifié distinct, généralement en plein air, réservé à la présentation, à la culture et à l'appréciation des plantes et d'autres formes de la nature**.  
+version : 0.0.1  
 
 ## Liste des propriétés  
 
@@ -366,6 +368,12 @@ Garden:
     - location    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -447,72 +455,109 @@ Garden:
 Voici un exemple de jardin au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
-  "type": "Garden",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "public"  
+    "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
+    "type": "Garden",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Santander",  
+            "postalCode": "39005",  
+            "streetAddress": "Avenida Casta\u00f1eda",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "El Sardinero"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "public"  
+        ]  
+    },  
+    "dateLastWatering": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-03-31T08:00:00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Jardines de Piquio. Zona El Sardinero"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.7836974,  
+                43.4741091  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Jardines de Piquio"  
+    },  
+    "openingHours": {  
+        "type": "Property",  
+        "value": "Mo-Su"  
+    },  
+    "refRecord": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
+        ]  
+    },  
+    "style": {  
+        "type": "Property",  
+        "value": "french"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
     ]  
-  },  
-  "style": {  
-    "type": "Property",  
-    "value": "french"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Jardines de Piquio. Zona El Sardinero"  
-  },  
-  "dateLastWatering": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-03-31T08:00:00Z"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.7836974,  
-        43.4741091  
-      ]  
-    }  
-  },  
-  "refRecord": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
-    ]  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "El Sardinero"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Santander",  
-      "postalCode": "39005",  
-      "streetAddress": "Avenida Casta\u00f1eda",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "openingHours": {  
-    "type": "Property",  
-    "value": "Mo-Su"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Jardines de Piquio"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-Non disponible l'exemple d'un jardin au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+#### Jardin NGSI-LD normalisé Exemple  
+Voici un exemple de jardin au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+    "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
+    "type": "Garden",  
+    "address": {  
+        "addressLocality": "Santander",  
+        "postalCode": "39005",  
+        "streetAddress": "Avenida Casta\u00f1eda",  
+        "type": "PostalAddress"  
+    },  
+    "areaServed": "El Sardinero",  
+    "category": [  
+        "public"  
+    ],  
+    "dateLastWatering": {  
+        "@type": "DateTime",  
+        "@value": "2017-03-31T08:00:00Z"  
+    },  
+    "description": "Jardines de Piquio. Zona El Sardinero",  
+    "location": {  
+        "coordinates": [  
+            -3.7836974,  
+            43.4741091  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Jardines de Piquio",  
+    "openingHours": "Mo-Su",  
+    "refRecord": [  
+        "urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"  
+    ],  
+    "style": "french",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
+}  
+```  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
