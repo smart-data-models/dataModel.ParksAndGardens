@@ -4,13 +4,13 @@
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Ein Garten ist ein planmäßig angelegter Raum, in der Regel im Freien, der der Ausstellung, der Pflege und dem Genuss von Pflanzen und anderen Formen der Natur gewidmet ist.**  
-Version: 0.0.1  
+Version: 0.0.3  
 
 ## Liste der Eigenschaften  
 
 - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Übergeordnetes Gebiet, zu dem der Garten gehört. Es kann verwendet werden, um Gärten nach Verantwortlichem, Bezirk, Nachbarschaft usw. zu gruppieren.  - `category`: Die Kategorie des Gartens. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Oder jeder andere Wert, der von einer Anwendung benötigt wird.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastWatering`: Zeitstempel, der der letzten Bewässerung dieses Gartens entspricht  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `nextWateringDeadline`: Frist für die nächste Bewässerungsaktion in diesem Garten  - `openingHours`: Öffnungszeiten dieses Gartens  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refRecord`: Liste der Datensätze, die Messungen in Bezug auf diesen Garten enthalten  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Stil des Gartens.  - `type`: NGSI-Entitätstyp: Es muss Garten sein    
 Erforderliche Eigenschaften  
-- `id`  - `location`  - `name`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -65,16 +65,16 @@ Garden:
       description: 'Garden''s category. Enum:''public, private, botanical, castle, community, monastery, residential, fencedOff''. Or any other value needed by an application.'    
       items:    
         enum:    
-          - public    
-          - private    
           - botanical    
           - castle    
           - community    
-          - monastary    
-          - residential    
           - fencedOff    
+          - monastery    
+          - private    
+          - public    
+          - residential    
         type: string    
-      minitems: 1    
+      minItems: 1    
       type: array    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -342,15 +342,15 @@ Garden:
     style:    
       description: 'Enum:''public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen''. Garden''s style.'    
       enum:    
-        - public    
+        - chinese    
         - english    
         - french    
-        - chinese    
-        - japanese    
-        - zen    
-        - rosarium    
         - herb_garden    
+        - japanese    
         - kitchen    
+        - public    
+        - rosarium    
+        - zen    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -365,15 +365,13 @@ Garden:
   required:    
     - id    
     - type    
-    - location    
-    - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
