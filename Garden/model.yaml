@@ -49,16 +49,16 @@ Garden:
       description: 'Garden''s category. Enum:''public, private, botanical, castle, community, monastery, residential, fencedOff''. Or any other value needed by an application.'
       items:
         enum:
-          - public
-          - private
           - botanical
           - castle
           - community
-          - monastary
-          - residential
           - fencedOff
+          - monastery
+          - private
+          - public
+          - residential
         type: string
-      minitems: 1
+      minItems: 1
       type: array
       x-ngsi:
         model: https://schema.org/Text
@@ -326,15 +326,15 @@ Garden:
     style:
       description: 'Enum:''public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen''. Garden''s style.'
       enum:
-        - public
+        - chinese
         - english
         - french
-        - chinese
-        - japanese
-        - zen
-        - rosarium
         - herb_garden
+        - japanese
         - kitchen
+        - public
+        - rosarium
+        - zen
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -349,12 +349,10 @@ Garden:
   required:
     - id
     - type
-    - location
-    - name
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.3
