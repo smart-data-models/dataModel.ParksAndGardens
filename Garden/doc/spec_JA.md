@@ -4,13 +4,13 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな説明**庭園は、植物や自然の他の形態の展示、栽培、および楽しみのために確保された、通常は屋外の区別できる計画された空間である**。  
-バージョン: 0.0.1  
+バージョン: 0.0.3  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: 庭園が属する上位の地域。責任者、地区、近隣地域などの単位で庭をグループ化するのに使用することができます。  - `category`: 庭園のカテゴリ。Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'.または、アプリケーションで必要とされるその他の値。  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastWatering`: この庭の最後の水やりに対応するタイムスタンプ  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `nextWateringDeadline`: この庭の次回の水やり作業の締切日  - `openingHours`: この庭園の開園時間  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRecord`: この庭園に関連する測定値を含むレコードの一覧です。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'.庭のスタイル  - `type`: NGSIエンティティタイプ。ガーデンである必要があります    
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: 庭園が属する上位の地域。責任者、地区、近隣地域などの単位で庭をグループ化するのに使用することができます。  - `category`: 庭園のカテゴリ。Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'（公営、私営、植物園、城、コミュニティ、修道院、住宅、フェンスオフ）。または、アプリケーションで必要とされるその他の値。  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastWatering`: この庭の最後の水やりに対応するタイムスタンプ  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `nextWateringDeadline`: この庭の次回の水やり作業の締切日  - `openingHours`: この庭園の開園時間  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRecord`: この庭園に関連する測定値を含むレコードの一覧です。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'（パブリック、イングリッシュ、フレンチ、チャイニーズ、ジャパニーズ、ゼン、ロザリウム、ハーブガーデン、キッチン庭のスタイル  - `type`: NGSIエンティティタイプ。ガーデンである必要があります    
 必要なプロパティ  
-- `id`  - `location`  - `name`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -65,16 +65,16 @@ Garden:
       description: 'Garden''s category. Enum:''public, private, botanical, castle, community, monastery, residential, fencedOff''. Or any other value needed by an application.'    
       items:    
         enum:    
-          - public    
-          - private    
           - botanical    
           - castle    
           - community    
-          - monastary    
-          - residential    
           - fencedOff    
+          - monastery    
+          - private    
+          - public    
+          - residential    
         type: string    
-      minitems: 1    
+      minItems: 1    
       type: array    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -342,15 +342,15 @@ Garden:
     style:    
       description: 'Enum:''public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen''. Garden''s style.'    
       enum:    
-        - public    
+        - chinese    
         - english    
         - french    
-        - chinese    
-        - japanese    
-        - zen    
-        - rosarium    
         - herb_garden    
+        - japanese    
         - kitchen    
+        - public    
+        - rosarium    
+        - zen    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -365,15 +365,13 @@ Garden:
   required:    
     - id    
     - type    
-    - location    
-    - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
@@ -522,7 +520,7 @@ Garden:
 }  
 ```  
 #### 庭 NGSI-LD 正規化例  
-ここでは、GardenをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、JSON-LD形式のGardenを正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
     "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
