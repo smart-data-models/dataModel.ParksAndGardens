@@ -1,12 +1,14 @@
-Entität: GreenspaceRecord  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: GreenspaceRecord  
 =========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung der Bedingungen, die auf einer bestimmten Fläche oder an einem bestimmten Punkt innerhalb einer Grünfläche (Blumenbeet, Garten usw.) erfasst wurden.**  
+Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `litterCoverage`: Prozentualer Anteil der Oberfläche, der mit Abfällen oder anderen Abfallstoffen bedeckt ist  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refDevice`: Das Gerät oder die Geräte, die zur Gewinnung der in diesem Datensatz enthaltenen Daten verwendet wurden  - `refGreenspace`: Der Garten oder das Blumenbeet, auf den/das sich dieser Eintrag bezieht  - `refWeatherObserved`:  Wetterbeobachtungen im Zusammenhang mit den von dieser Einheit beschriebenen Messungen  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `soilMoistureEc`: Die beobachtete Bodenfeuchtigkeit wird als elektrische Leitfähigkeit (EC) in der Einheit Siemens pro Meter (S/m) gemessen.  - `soilMoistureVwc`: Die beobachtete Bodenfeuchtigkeit wird als volumetrischer Wassergehalt (VWC) gemessen (in Prozent, ausgedrückt in Teilen pro eins).  - `soilTemperature`: Die beobachtete Bodentemperatur in Celsiusgraden  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-Entitätstyp: Es muss GreenspaceRecord sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `litterCoverage`: Prozentualer Anteil der Oberfläche, der mit Abfällen oder anderen Abfallstoffen bedeckt ist  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refDevice`: Das Gerät oder die Geräte, die zur Gewinnung der in diesem Datensatz enthaltenen Daten verwendet wurden  - `refGreenspace`: Der Garten oder das Blumenbeet, auf den/das sich dieser Eintrag bezieht  - `refWeatherObserved`:  Wetterbeobachtungen im Zusammenhang mit den von dieser Einheit beschriebenen Messungen  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `soilMoistureEc`: Die beobachtete Bodenfeuchtigkeit wird als elektrische Leitfähigkeit (EC) in der Einheit Siemens pro Meter (S/m) gemessen.  - `soilMoistureVwc`: Die beobachtete Bodenfeuchtigkeit wird als volumetrischer Wassergehalt (VWC) gemessen (in Prozent, ausgedrückt in Teilen pro eins).  - `soilTemperature`: Die beobachtete Bodentemperatur in Celsiusgraden  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI-Entitätstyp: Es muss GreenspaceRecord sein    
 Erforderliche Eigenschaften  
 - `dateObserved`  - `id`  - `location`  - `type`    
 Dieser Entitätstyp wurde durch den Entitätstyp AgriParcelRecord inspiriert, der von den GSMA Harmonized Data Models definiert wurde.  
@@ -384,11 +386,17 @@ GreenspaceRecord:
     - location    
     - dateObserved    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
 #### GreenspaceRecord NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -405,7 +413,7 @@ GreenspaceRecord:
 }  
 ```  
 #### GreenspaceRecord NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -440,73 +448,71 @@ GreenspaceRecord:
 Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-  "type": "GreenspaceRecord",  
-  "refGreenspace": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 17  
-  },  
-  "soilTemperature": {  
-    "type": "Property",  
-    "value": 13  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.7836974,  
-        43.4741091  
-      ]  
-    }  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 0.87  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2019-01-15T12:00:00Z"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+    "type": "GreenspaceRecord",  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2019-01-15T12:00:00Z"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.7836974,  
+                43.4741091  
+            ]  
+        }  
+    },  
+    "refGreenspace": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 0.87  
+    },  
+    "soilTemperature": {  
+        "type": "Property",  
+        "value": 13  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 17  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### GreenspaceRecord NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen GreenspaceRecord im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "dateObserved": {  
-    "@type": "DateTime",  
-    "@value": "2019-01-15T12:00:00Z"  
-  },  
-  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-  "location": {  
-    "coordinates": [  
-      -3.7836974,  
-      43.4741091  
-    ],  
-    "type": "Point"  
-  },  
-  "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
-  "relativeHumidity": 0.87,  
-  "soilTemperature": 13,  
-  "temperature": 17,  
-  "type": "GreenspaceRecord"  
+    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+    "type": "GreenspaceRecord",  
+    "dateObserved": {  
+        "@type": "DateTime",  
+        "@value": "2019-01-15T12:00:00Z"  
+    },  
+    "location": {  
+        "coordinates": [  
+            -3.7836974,  
+            43.4741091  
+        ],  
+        "type": "Point"  
+    },  
+    "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
+    "relativeHumidity": 0.87,  
+    "soilTemperature": 13,  
+    "temperature": 17,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  

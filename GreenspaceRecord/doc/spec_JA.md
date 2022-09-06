@@ -1,17 +1,19 @@
-エンティティGreenspaceRecord（グリーンスペースレコード  
-===================================  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティグリーンスペースレコード  
+==================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、グリーンスペース（花壇、庭など）内の特定のエリアやポイントで記録された条件の調和された記述を含んでいます**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、緑地（花壇、庭など）内の特定のエリアやポイントで記録された状況の調和された記述を含んでいます。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: この観測の日付と時刻をISO8601 UTCフォーマットで表示します。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `litterCoverage`: ゴミやその他の廃棄物で覆われた表面の割合  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refDevice`: このレコードによって表現されたデータを得るために使用されたデバイスまたは装置  - `refGreenspace`: このレコードが参照している庭や花壇は  - `refWeatherObserved`: このエンティティによって記述された測定に関連する気象観測  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `soilMoistureEc`: 観測された土壌水分は、電気伝導率（EC）としてシーメンス／メートル（S/m）の単位で測定される。  - `soilMoistureVwc`: 観察された土壌水分は体積含水率（VWC）として測定された（パーセンテージ、単位はppm）。  - `soilTemperature`: 観測された土壌の温度（摂氏  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entity Typeです。GreenspaceRecordである必要があります。    
-必須項目  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved`: ISO8601 UTC フォーマットによる観測日時  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `litterCoverage`: ゴミやその他の廃棄物で覆われた表面のパーセンテージ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refDevice`: このレコードで表現されたデータを取得するために使用された装置または機器  - `refGreenspace`: このレコードが参照する庭または花壇  - `refWeatherObserved`: このエンティティによって記述される測定に関連する気象観測値  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `soilMoistureEc`: 観測された土壌の水分は、電気伝導度（EC）（単位：ジーメンス/m）として測定されます。  - `soilMoistureVwc`: 観測された土壌の水分を体積含水率（VWC）として測定（％、単位はpp.1）。  - `soilTemperature`: 観測された土壌の温度（単位：摂氏  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。これはGreenspaceRecordでなければなりません。    
+必要なプロパティ  
 - `dateObserved`  - `id`  - `location`  - `type`    
-このエンティティタイプは、GSMA Harmonized Data Modelsで定義されているAgriParcelRecordエンティティタイプを参考にしています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+このエンティティタイプは、GSMA Harmonized Data Models で定義されている AgriParcelRecord エンティティタイプから着想を得ている。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GreenspaceRecord:    
@@ -384,11 +386,17 @@ GreenspaceRecord:
     - location    
     - dateObserved    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### GreenspaceRecord NGSI-v2 キー・バリューの例  
-ここでは、GreenspaceRecordをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GreenspaceRecord NGSI-v2 キー値の例  
+以下は、GreenspaceRecordをJSON-LD形式でkey-valueにした例である。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -404,8 +412,8 @@ GreenspaceRecord:
   "dateObserved": "2019-01-15T12:00:00Z"  
 }  
 ```  
-#### GreenspaceRecord NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のGreenspaceRecordの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキスト・データを返します。  
+#### GreenspaceRecord NGSI-v2 正規化例  
+以下は、正規化されたJSON-LD形式のGreenspaceRecordの例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -436,77 +444,75 @@ GreenspaceRecord:
   }  
 }  
 ```  
-#### GreenspaceRecord NGSI-LD のキーバリューの例。  
-ここでは、GreenspaceRecordをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### GreenspaceRecord NGSI-LD キー値の例  
+以下は、GreenspaceRecordをJSON-LD形式でkey-valueにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-  "type": "GreenspaceRecord",  
-  "refGreenspace": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 17  
-  },  
-  "soilTemperature": {  
-    "type": "Property",  
-    "value": 13  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.7836974,  
-        43.4741091  
-      ]  
-    }  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 0.87  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2019-01-15T12:00:00Z"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+    "type": "GreenspaceRecord",  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2019-01-15T12:00:00Z"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.7836974,  
+                43.4741091  
+            ]  
+        }  
+    },  
+    "refGreenspace": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 0.87  
+    },  
+    "soilTemperature": {  
+        "type": "Property",  
+        "value": 13  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 17  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### GreenspaceRecord NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LDフォーマットのGreenspaceRecordの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキスト・データを返します。  
+#### GreenspaceRecord NGSI-LD 正規化例  
+以下は、正規化されたJSON-LD形式のGreenspaceRecordの例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "dateObserved": {  
-    "@type": "DateTime",  
-    "@value": "2019-01-15T12:00:00Z"  
-  },  
-  "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
-  "location": {  
-    "coordinates": [  
-      -3.7836974,  
-      43.4741091  
-    ],  
-    "type": "Point"  
-  },  
-  "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
-  "relativeHumidity": 0.87,  
-  "soilTemperature": 13,  
-  "temperature": 17,  
-  "type": "GreenspaceRecord"  
+    "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
+    "type": "GreenspaceRecord",  
+    "dateObserved": {  
+        "@type": "DateTime",  
+        "@value": "2019-01-15T12:00:00Z"  
+    },  
+    "location": {  
+        "coordinates": [  
+            -3.7836974,  
+            43.4741091  
+        ],  
+        "type": "Point"  
+    },  
+    "refGreenspace": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio",  
+    "relativeHumidity": 0.87,  
+    "soilTemperature": 13,  
+    "temperature": 17,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  

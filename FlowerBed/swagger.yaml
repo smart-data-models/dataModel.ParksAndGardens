@@ -11,7 +11,7 @@ info:
   description:  |
     A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.
   title: FlowerBed
-  version: "1.0.0"
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 
