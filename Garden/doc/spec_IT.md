@@ -4,13 +4,13 @@
 [Licenza aperta](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Un giardino è uno spazio pianificato, di solito all'aperto, riservato all'esposizione, alla coltivazione e al godimento delle piante e di altre forme della natura.  
-versione: 0.0.1  
+versione: 0.0.3  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `annotations`: Annotazioni sull'elemento  - `areaServed`: Area di livello superiore a cui appartiene il giardino. Può essere utilizzato per raggruppare i giardini per responsabilità, distretto, quartiere, ecc.  - `category`: Categoria del giardino. Enum:'pubblico, privato, botanico, castello, comunità, monastero, residenziale, fencedOff'. O qualsiasi altro valore necessario all'applicazione.  - `color`: Il colore del prodotto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateLastWatering`: Data e ora dell'ultima irrigazione di questo giardino  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `id`: Identificatore univoco dell'entità  - `image`: Un'immagine dell'articolo  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `nextWateringDeadline`: Termine ultimo per il prossimo intervento di irrigazione di questo giardino  - `openingHours`: Orari di apertura di questo giardino  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refRecord`: Elenco dei record che contengono misure relative a questo giardino  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che fornisce la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `style`: Enum:'pubblico, inglese, francese, cinese, giapponese, zen, rosarium, herb_garden, kitchen'. Stile del giardino.  - `type`: Tipo di entità NGSI: Deve essere Giardino    
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `annotations`: Annotazioni sull'elemento  - `areaServed`: Area di livello superiore a cui appartiene il giardino. Può essere utilizzato per raggruppare i giardini per responsabilità, distretto, quartiere, ecc.  - `category`: Categoria del giardino. Enum:'pubblico, privato, botanico, castello, comunità, monastero, residenziale, fencedOff'. O qualsiasi altro valore necessario all'applicazione.  - `color`: Il colore del prodotto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateLastWatering`: Data e ora dell'ultima irrigazione di questo giardino  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `id`: Identificatore univoco dell'entità  - `image`: Un'immagine dell'articolo  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `nextWateringDeadline`: Termine ultimo per il prossimo intervento di irrigazione di questo giardino  - `openingHours`: Orari di apertura di questo giardino  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refRecord`: Elenco dei record che contengono misure relative a questo giardino  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `style`: Enum:'pubblico, inglese, francese, cinese, giapponese, zen, rosarium, herb_garden, kitchen'. Stile del giardino.  - `type`: Tipo di entità NGSI: Deve essere Giardino    
 Proprietà richieste  
-- `id`  - `location`  - `name`  - `type`  ## Modello di dati descrizione delle proprietà  
+- `id`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -65,16 +65,16 @@ Garden:
       description: 'Garden''s category. Enum:''public, private, botanical, castle, community, monastery, residential, fencedOff''. Or any other value needed by an application.'    
       items:    
         enum:    
-          - public    
-          - private    
           - botanical    
           - castle    
           - community    
-          - monastary    
-          - residential    
           - fencedOff    
+          - monastery    
+          - private    
+          - public    
+          - residential    
         type: string    
-      minitems: 1    
+      minItems: 1    
       type: array    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -342,15 +342,15 @@ Garden:
     style:    
       description: 'Enum:''public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen''. Garden''s style.'    
       enum:    
-        - public    
+        - chinese    
         - english    
         - french    
-        - chinese    
-        - japanese    
-        - zen    
-        - rosarium    
         - herb_garden    
+        - japanese    
         - kitchen    
+        - public    
+        - rosarium    
+        - zen    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -365,15 +365,13 @@ Garden:
   required:    
     - id    
     - type    
-    - location    
-    - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Esempi di payload  
@@ -403,7 +401,7 @@ Garden:
 }  
 ```  
 #### Giardino NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un Giardino in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di un Giardino in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Santander-Garden-Piquio",  
