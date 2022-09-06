@@ -21,7 +21,7 @@
         "name": "https://smartdatamodels.org/name",
         "nextWateringDeadline": "https://smartdatamodels.org/dataModel.ParksAndGardens/nextWateringDeadline",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "openingHours": "https://smartdatamodels.org/dataModel.ParksAndGardens/openingHours",
+        "openingHours": "https://smartdatamodels.org/openingHours",
         "owner": "https://smartdatamodels.org/owner",
         "refDevice": "https://smartdatamodels.org/dataModel.ParksAndGardens/refDevice",
         "refGarden": "https://smartdatamodels.org/dataModel.ParksAndGardens/refGarden",
