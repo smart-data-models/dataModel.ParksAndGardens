@@ -225,8 +225,8 @@
                 "valueSchema": "string",
                 "enumValues": [
                     {
-                        "name": "public",
-                        "displayName": "public",
+                        "name": "chinese",
+                        "displayName": "chinese",
                         "enumValue": 1
                     },
                     {
@@ -240,8 +240,8 @@
                         "enumValue": 3
                     },
                     {
-                        "name": "chinese",
-                        "displayName": "chinese",
+                        "name": "herb_garden",
+                        "displayName": "herb_garden",
                         "enumValue": 4
                     },
                     {
@@ -250,23 +250,23 @@
                         "enumValue": 5
                     },
                     {
-                        "name": "zen",
-                        "displayName": "zen",
+                        "name": "kitchen",
+                        "displayName": "kitchen",
                         "enumValue": 6
+                    },
+                    {
+                        "name": "public",
+                        "displayName": "public",
+                        "enumValue": 7
                     },
                     {
                         "name": "rosarium",
                         "displayName": "rosarium",
-                        "enumValue": 7
-                    },
-                    {
-                        "name": "herb_garden",
-                        "displayName": "herb_garden",
                         "enumValue": 8
                     },
                     {
-                        "name": "kitchen",
-                        "displayName": "kitchen",
+                        "name": "zen",
+                        "displayName": "zen",
                         "enumValue": 9
                     }
                 ]
