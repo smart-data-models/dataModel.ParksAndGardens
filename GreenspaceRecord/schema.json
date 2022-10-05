@@ -43,6 +43,10 @@
           "type": "number",
           "description": "Property. The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m). Units:'Siemens per meter'. Model:'https://schema.org/Number'"
         },
+        "soilMoisturePressure": {
+          "type": "number",
+          "description": "Property. The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa). Units:'kPa'. Model:'https://schema.org/Number'"
+        },
         "refGreenspace": {
           "anyOf": [
             {
