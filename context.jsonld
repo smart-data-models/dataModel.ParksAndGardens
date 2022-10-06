@@ -31,6 +31,7 @@
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "shape": "https://smartdatamodels.org/dataModel.ParksAndGardens/shape",
         "soilMoistureEc": "https://smartdatamodels.org/dataModel.ParksAndGardens/soilMoistureEc",
+        "soilMoisturePressure": "https://smartdatamodels.org/dataModel.ParksAndGardens/soilMoisturePressure",
         "soilMoistureVwc": "https://smartdatamodels.org/dataModel.ParksAndGardens/soilMoistureVwc",
         "soilTemperature": "https://smartdatamodels.org/dataModel.ParksAndGardens/soilTemperature",
         "source": "https://smartdatamodels.org/source",
