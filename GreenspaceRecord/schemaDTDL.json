@@ -123,6 +123,14 @@
             "comment": "The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m)"
         },
         {
+            "name": "soilMoisturePressure",
+            "writable": true,
+            "displayName": "soilMoisturePressure",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)"
+        },
+        {
             "name": "soilMoistureVwc",
             "writable": true,
             "displayName": "soilMoistureVwc",
