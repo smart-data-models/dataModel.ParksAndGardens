@@ -4,13 +4,13 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述。**このエンティティは、緑地（花壇、庭など）内の特定のエリアやポイントで記録された状況の調和された記述を含んでいます。  
-バージョン: 0.0.1  
+バージョン: 0.0.3  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved`: ISO8601 UTC フォーマットによる観測日時  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `litterCoverage`: ゴミやその他の廃棄物で覆われた表面のパーセンテージ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refDevice`: このレコードで表現されたデータを取得するために使用された装置または機器  - `refGreenspace`: このレコードが参照する庭または花壇  - `refWeatherObserved`: このエンティティによって記述される測定に関連する気象観測値  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `soilMoistureEc`: 観測された土壌の水分は、電気伝導度（EC）（単位：ジーメンス/m）として測定されます。  - `soilMoistureVwc`: 観測された土壌の水分を体積含水率（VWC）として測定（％、単位はpp.1）。  - `soilTemperature`: 観測された土壌の温度（単位：摂氏  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。これはGreenspaceRecordでなければなりません。    
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved`: ISO8601 UTC フォーマットによる観測日時  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `litterCoverage`: ゴミやその他の廃棄物で覆われた表面のパーセンテージ  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `refDevice`: このレコードで表現されたデータを取得するために使用された装置または機器  - `refGreenspace`: このレコードが参照する庭または花壇  - `refWeatherObserved`: このエンティティによって記述される測定に関連する気象観測値  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `soilMoistureEc`: 観測された土壌の水分は、電気伝導度（EC）（単位：ジーメンス/m）として測定されます。  - `soilMoisturePressure`: 観測された土壌水分量 圧力(Pressure)、単位はキロパスカル(kPa)。  - `soilMoistureVwc`: 観測された土壌の水分を体積含水率（VWC）として測定（％、単位：pp.1）。  - `soilTemperature`: 観測された土壌の温度（単位：摂氏  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。これはGreenspaceRecordでなければなりません。    
 必要なプロパティ  
-- `dateObserved`  - `id`  - `location`  - `type`    
+- `id`  - `type`    
 このエンティティタイプは、GSMA Harmonized Data Models で定義されている AgriParcelRecord エンティティタイプから着想を得ている。  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
@@ -353,6 +353,13 @@ GreenspaceRecord:
         model: https://schema.org/Number    
         type: Property    
         units: 'Siemens per meter'    
+    soilMoisturePressure:    
+      description: 'The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kPa    
     soilMoistureVwc:    
       description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'    
       maximum: 1    
@@ -383,15 +390,13 @@ GreenspaceRecord:
   required:    
     - id    
     - type    
-    - location    
-    - dateObserved    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
@@ -474,6 +479,10 @@ GreenspaceRecord:
     "relativeHumidity": {  
         "type": "Property",  
         "value": 0.87  
+    },  
+    "soilMoisturePressure": {  
+        "type": "Property",  
+        "value": 11  
     },  
     "soilTemperature": {  
         "type": "Property",  
