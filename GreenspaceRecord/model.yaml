@@ -335,6 +335,13 @@ GreenspaceRecord:
         model: https://schema.org/Number
         type: Property
         units: 'Siemens per meter'
+    soilMoisturePressure:
+      description: 'The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kPa
     soilMoistureVwc:
       description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'
       maximum: 1
@@ -365,12 +372,10 @@ GreenspaceRecord:
   required:
     - id
     - type
-    - location
-    - dateObserved
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.3
