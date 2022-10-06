@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "$id": "https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json",
   "title": "Smart Data Models - Parks and Gardens / Greenspace Record",
   "description": "This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).",
@@ -42,6 +42,10 @@
         "soilMoistureEc": {
           "type": "number",
           "description": "Property. The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m). Units:'Siemens per meter'. Model:'https://schema.org/Number'"
+        },
+        "soilMoisturePressure": {
+          "type": "number",
+          "description": "Property. The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa). Units:'kPa'. Model:'https://schema.org/Number'"
         },
         "refGreenspace": {
           "anyOf": [

@@ -26,6 +26,10 @@
         "type": "Property",
         "value": 0.87
     },
+    "soilMoisturePressure": {
+        "type": "Property",
+        "value": 11
+    },
     "soilTemperature": {
         "type": "Property",
         "value": 13
