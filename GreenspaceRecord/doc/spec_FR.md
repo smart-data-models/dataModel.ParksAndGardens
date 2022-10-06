@@ -4,13 +4,13 @@
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée des conditions enregistrées sur une zone ou un point particulier à l'intérieur d'un espace vert (parterre, jardin, etc.).**  
-version : 0.0.1  
+version : 0.0.3  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: La date et l'heure de cette observation en format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `litterCoverage`: Pourcentage de la surface couverte de détritus ou d'autres déchets  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `soilMoistureEc`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  - `soilMoistureVwc`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: La date et l'heure de cette observation en format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `litterCoverage`: Pourcentage de la surface couverte de détritus ou d'autres déchets  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `soilMoistureEc`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  - `soilMoisturePressure`: L'humidité du sol observée, mesurée en tant que pression, pression en unités de kiloPascals (kPa).  - `soilMoistureVwc`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
 Propriétés requises  
-- `dateObserved`  - `id`  - `location`  - `type`    
+- `id`  - `type`    
 Ce type d'entité a été inspiré par le type d'entité AgriParcelRecord défini par les modèles de données harmonisés du GSMA.  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -353,6 +353,13 @@ GreenspaceRecord:
         model: https://schema.org/Number    
         type: Property    
         units: 'Siemens per meter'    
+    soilMoisturePressure:    
+      description: 'The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kPa    
     soilMoistureVwc:    
       description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'    
       maximum: 1    
@@ -383,15 +390,13 @@ GreenspaceRecord:
   required:    
     - id    
     - type    
-    - location    
-    - dateObserved    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -444,7 +449,7 @@ GreenspaceRecord:
   }  
 }  
 ```  
-#### GreenspaceRecord Valeurs-clés NGSI-LD Exemple  
+#### GreenspaceRecord Valeurs clés NGSI-LD Exemple  
 Voici un exemple de GreenspaceRecord au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
@@ -474,6 +479,10 @@ GreenspaceRecord:
     "relativeHumidity": {  
         "type": "Property",  
         "value": 0.87  
+    },  
+    "soilMoisturePressure": {  
+        "type": "Property",  
+        "value": 11  
     },  
     "soilTemperature": {  
         "type": "Property",  
