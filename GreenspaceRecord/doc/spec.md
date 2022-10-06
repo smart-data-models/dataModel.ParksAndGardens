@@ -4,13 +4,13 @@
 [Open License](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of the conditions recorded on a particular area or point inside a greenspace (flower bed, garden, etc.).**  
-version: 0.0.1  
+version: 0.0.3  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `annotations`: Annotations about the item  - `areaServed`: The geographic area where a service or offered item is provided  - `color`: The color of the product  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTCformat  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `image`: An image of the item  - `litterCoverage`: Percentage of the surface covered with litter or other waste materials  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refDevice`: The device or devices used to obtain the data expressed by this record  - `refGreenspace`: The garden or flower bed to which this record refers to  - `refWeatherObserved`:  Weather observed associated to the measurements described by this entity  - `seeAlso`: list of uri pointing to additional resources about the item  - `soilMoistureEc`: The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m)  - `soilMoistureVwc`: The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)  - `soilTemperature`: The observed soil temperature in Celsius degrees  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be GreenspaceRecord    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `annotations`: Annotations about the item  - `areaServed`: The geographic area where a service or offered item is provided  - `color`: The color of the product  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTCformat  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `image`: An image of the item  - `litterCoverage`: Percentage of the surface covered with litter or other waste materials  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refDevice`: The device or devices used to obtain the data expressed by this record  - `refGreenspace`: The garden or flower bed to which this record refers to  - `refWeatherObserved`:  Weather observed associated to the measurements described by this entity  - `seeAlso`: list of uri pointing to additional resources about the item  - `soilMoistureEc`: The observed soild moisture measured as Electrical Conductivity, EC in units of Siemens per meter (S/m)  - `soilMoisturePressure`: The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)  - `soilMoistureVwc`: The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)  - `soilTemperature`: The observed soil temperature in Celsius degrees  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity Type: It has to be GreenspaceRecord    
 Required properties  
-- `dateObserved`  - `id`  - `location`  - `type`    
+- `id`  - `type`    
 This entity type has been inspired by the AgriParcelRecord entity type defined by the GSMA Harmonized Data Models.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -353,6 +353,13 @@ GreenspaceRecord:
         model: https://schema.org/Number    
         type: Property    
         units: 'Siemens per meter'    
+    soilMoisturePressure:    
+      description: 'The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kPa    
     soilMoistureVwc:    
       description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'    
       maximum: 1    
@@ -383,15 +390,13 @@ GreenspaceRecord:
   required:    
     - id    
     - type    
-    - location    
-    - dateObserved    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Example payloads    
@@ -474,6 +479,10 @@ GreenspaceRecord:
     "relativeHumidity": {  
         "type": "Property",  
         "value": 0.87  
+    },  
+    "soilMoisturePressure": {  
+        "type": "Property",  
+        "value": 11  
     },  
     "soilTemperature": {  
         "type": "Property",  
