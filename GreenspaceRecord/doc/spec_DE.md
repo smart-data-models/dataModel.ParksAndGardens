@@ -4,13 +4,13 @@
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung der Bedingungen, die auf einer bestimmten Fläche oder an einem bestimmten Punkt innerhalb einer Grünfläche (Blumenbeet, Garten usw.) erfasst wurden.**  
-Version: 0.0.1  
+Version: 0.0.3  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `litterCoverage`: Prozentualer Anteil der Oberfläche, der mit Abfällen oder anderen Abfallstoffen bedeckt ist  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refDevice`: Das Gerät oder die Geräte, die zur Gewinnung der in diesem Datensatz enthaltenen Daten verwendet wurden  - `refGreenspace`: Der Garten oder das Blumenbeet, auf den/das sich dieser Eintrag bezieht  - `refWeatherObserved`:  Wetterbeobachtungen im Zusammenhang mit den von dieser Einheit beschriebenen Messungen  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `soilMoistureEc`: Die beobachtete Bodenfeuchtigkeit wird als elektrische Leitfähigkeit (EC) in der Einheit Siemens pro Meter (S/m) gemessen.  - `soilMoistureVwc`: Die beobachtete Bodenfeuchtigkeit wird als volumetrischer Wassergehalt (VWC) gemessen (in Prozent, ausgedrückt in Teilen pro eins).  - `soilTemperature`: Die beobachtete Bodentemperatur in Celsiusgraden  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type`: NGSI-Entitätstyp: Es muss GreenspaceRecord sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `litterCoverage`: Prozentualer Anteil der Oberfläche, der mit Abfällen oder anderen Abfallstoffen bedeckt ist  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refDevice`: Das Gerät oder die Geräte, die zur Gewinnung der in diesem Datensatz enthaltenen Daten verwendet wurden  - `refGreenspace`: Der Garten oder das Blumenbeet, auf den/das sich dieser Eintrag bezieht  - `refWeatherObserved`:  Wetterbeobachtungen im Zusammenhang mit den von dieser Einheit beschriebenen Messungen  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `soilMoistureEc`: Die beobachtete Bodenfeuchtigkeit wird als elektrische Leitfähigkeit (EC) in der Einheit Siemens pro Meter (S/m) gemessen.  - `soilMoisturePressure`: Die beobachtete Bodenfeuchte, gemessen als Druck, Druck in Einheiten von Kilopascal (kPa)  - `soilMoistureVwc`: Die beobachtete Bodenfeuchtigkeit wird als volumetrischer Wassergehalt (VWC) gemessen (in Prozent, ausgedrückt in Teilen pro eins).  - `soilTemperature`: Die beobachtete Bodentemperatur in Celsiusgraden  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-Entitätstyp: Es muss GreenspaceRecord sein    
 Erforderliche Eigenschaften  
-- `dateObserved`  - `id`  - `location`  - `type`    
+- `id`  - `type`    
 Dieser Entitätstyp wurde durch den Entitätstyp AgriParcelRecord inspiriert, der von den GSMA Harmonized Data Models definiert wurde.  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -353,6 +353,13 @@ GreenspaceRecord:
         model: https://schema.org/Number    
         type: Property    
         units: 'Siemens per meter'    
+    soilMoisturePressure:    
+      description: 'The observed soild moisture measured as Pressure, presure in units of kiloPascals (kPa)'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kPa    
     soilMoistureVwc:    
       description: 'The observed soil moisture measured as Volumetric Water Content, VWC (percentage, expressed in parts per one)'    
       maximum: 1    
@@ -383,15 +390,13 @@ GreenspaceRecord:
   required:    
     - id    
     - type    
-    - location    
-    - dateObserved    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/specs/ParksAndGardens/GreenspaceRecord/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
@@ -474,6 +479,10 @@ GreenspaceRecord:
     "relativeHumidity": {  
         "type": "Property",  
         "value": 0.87  
+    },  
+    "soilMoisturePressure": {  
+        "type": "Property",  
+        "value": 11  
     },  
     "soilTemperature": {  
         "type": "Property",  
