@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : GreenspaceRecord  
-=========================  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/GreenspaceRecord/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée des conditions enregistrées sur une zone ou un point particulier à l'intérieur d'un espace vert (parterre, jardin, etc.).**  
 version : 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: La date et l'heure de cette observation en format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `litterCoverage`: Pourcentage de la surface couverte de détritus ou d'autres déchets  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refGreenspace`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  - `refWeatherObserved`:  Météo observée associée aux mesures décrites par cette entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `soilMoistureEc`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  - `soilMoisturePressure`: L'humidité du sol observée, mesurée en tant que pression, pression en unités de kiloPascals (kPa).  - `soilMoistureVwc`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  - `soilTemperature`: La température du sol observée en degrés Celsius  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `annotations[array]`: Annotations sur l'élément  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: La couleur du produit  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved[string]`: La date et l'heure de cette observation en format ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `image[string]`: Une image de l'article  . Model: [https://schema.org/URL](https://schema.org/URL)- `litterCoverage[number]`: Pourcentage de la surface couverte de détritus ou d'autres déchets  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice[*]`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `refGreenspace[*]`: Le jardin ou le parterre de fleurs auquel cette fiche fait référence  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `refWeatherObserved[*]`:  Météo observée associée aux mesures décrites par cette entité  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `soilMoistureEc[number]`: L'humidité du sol observée est mesurée en tant que conductivité électrique, EC, en unités de Siemens par mètre (S/m).  . Model: [https://schema.org/Number](https://schema.org/Number)- `soilMoisturePressure[number]`: L'humidité du sol observée, mesurée en tant que pression, pression en unités de kiloPascals (kPa).  . Model: [https://schema.org/Number](https://schema.org/Number)- `soilMoistureVwc[number]`: L'humidité du sol observée est mesurée en tant que teneur en eau volumétrique, VWC (pourcentage, exprimé en parties par un).  . Model: [https://schema.org/Number](https://schema.org/Number)- `soilTemperature[number]`: La température du sol observée en degrés Celsius  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI : Il doit s'agir de GreenspaceRecord  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Ce type d'entité a été inspiré par le type d'entité AgriParcelRecord défini par les modèles de données harmonisés du GSMA.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 GreenspaceRecord:    
@@ -399,9 +412,14 @@ GreenspaceRecord:
   x-version: 0.0.3    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### GreenspaceRecord Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de GreenspaceRecord au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -417,8 +435,10 @@ GreenspaceRecord:
   "dateObserved": "2019-01-15T12:00:00Z"  
 }  
 ```  
+</details>  
 #### GreenspaceRecord NGSI-v2 normalisé Exemple  
 Voici un exemple de GreenspaceRecord au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Santander-Garden-Piquio-Record-1",  
@@ -449,8 +469,10 @@ GreenspaceRecord:
   }  
 }  
 ```  
-#### GreenspaceRecord Valeurs clés NGSI-LD Exemple  
+</details>  
+#### GreenspaceRecord Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de GreenspaceRecord au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
@@ -498,8 +520,10 @@ GreenspaceRecord:
     ]  
 }  
 ```  
+</details>  
 #### GreenspaceRecord NGSI-LD normalisé Exemple  
 Voici un exemple de GreenspaceRecord au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",  
@@ -520,8 +544,17 @@ GreenspaceRecord:
     "soilTemperature": 13,  
     "temperature": 17,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
