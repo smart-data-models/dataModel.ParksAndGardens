@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: FlowerBed  
-==================  
+==================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Una parcela de jardín en la que se cultivan flores (u otras plantas). Normalmente se encuentran parterres en parques, jardines, zonas peatonales o en grandes intercambios de carreteras.**  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este parterre. Enum:'seto, área de césped, portátil, mancha arbórea urbana'. O cualquier valor extendido que necesite la aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastWatering`: Marca de tiempo que corresponde al último riego del parterre.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth`: La profundidad de este parterre.  - `description`: Una descripción de este artículo  - `height`: Altura de este parterre.  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `nextWateringDeadline`: Fecha límite para la próxima operación de riego.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refGarden`: Jardín de la cama de flores (si pertenece a alguna).  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `shape`: Forma de este parterre. Enum:'rectangular, cuadrada, elíptica, poligonal, circular'. O cualquier otra requerida por una aplicación.  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `taxon`: Se utiliza para indicar el [taxón] biológico (http://en.wikipedia.org/wiki/en:taxon) al que pertenecen los árboles o las plantas del parterre  - `type`: Tipo de entidad NGSI: Tiene que ser FlowerBed  - `width`: La anchura de este parterre.    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `annotations[array]`: Anotaciones sobre el artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Categoría de este parterre. Enum:'seto, área de césped, portátil, mancha arbórea urbana'. O cualquier valor extendido que necesite la aplicación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: El color del producto  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastWatering[string]`: Marca de tiempo que corresponde al último riego del parterre.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth[number]`: La profundidad de este parterre.  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: Una descripción de este artículo  - `height[string]`: Altura de este parterre.  . Model: [https://schema.org/heigth](https://schema.org/heigth)- `id[*]`: Identificador único de la entidad  - `image[string]`: Una imagen del artículo  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `nextWateringDeadline[string]`: Fecha límite para la próxima operación de riego.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refGarden[*]`: Jardín de la cama de flores (si pertenece a alguna).  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `shape[array]`: Forma de este parterre. Enum:'rectangular, cuadrada, elíptica, poligonal, circular'. O cualquier otra requerida por una aplicación.  . Model: [https://schema.org/depth](https://schema.org/depth)- `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `taxon[array]`: Se utiliza para indicar el [taxón] biológico (http://en.wikipedia.org/wiki/en:taxon) al que pertenecen los árboles o las plantas del parterre  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI: Tiene que ser FlowerBed  - `width[number]`: La anchura de este parterre.  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FlowerBed:    
@@ -400,9 +414,14 @@ FlowerBed:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### FlowerBed NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un FlowerBed en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -422,8 +441,10 @@ FlowerBed:
   "soilMoistureVwc": 0.85  
 }  
 ```  
+</details>  
 #### FlowerBed NGSI-v2 normalizado Ejemplo  
-He aquí un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "FlowerBed-345",  
@@ -458,8 +479,10 @@ FlowerBed:
   }  
 }  
 ```  
+</details>  
 #### FlowerBed NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un FlowerBed en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
@@ -510,8 +533,10 @@ FlowerBed:
     ]  
 }  
 ```  
+</details>  
 #### FlowerBed NGSI-LD normalizado Ejemplo  
 He aquí un ejemplo de un FlowerBed en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
@@ -539,9 +564,18 @@ FlowerBed:
     "soilMoistureVwc": 0.85,  
     "soilTemperature": 17,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
 Existen dos opciones para representar las mediciones observadas. A) A través de una entidad vinculada de tipo `GreenspaceRecord` (atributo denominado `refRecord`). B) A través de un grupo de propiedades de medición ya definidas por [GreenspaceRecord] (../../GreenspaceRecord/doc/spec.md). Aquí está la descripción del atributo que se utilizará para la opción `refRecord`; Lista de registros que contienen mediciones relacionadas con este parterre. Tipo de atributo; Relación. Lista de referencias a entidades del tipo `GreenspaceRecord`.  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
