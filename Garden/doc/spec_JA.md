@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ庭園  
-========  
+========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな説明**庭園は、植物や自然の他の形態の展示、栽培、および楽しみのために確保された、通常は屋外の区別できる計画された空間である**。  
 バージョン: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: 庭園が属する上位の地域。責任者、地区、近隣地域などの単位で庭をグループ化するのに使用することができます。  - `category`: 庭園のカテゴリ。Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'（公営、私営、植物園、城、コミュニティ、修道院、住宅、フェンスオフ）。または、アプリケーションで必要とされるその他の値。  - `color`: 製品の色  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastWatering`: この庭の最後の水やりに対応するタイムスタンプ  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `nextWateringDeadline`: この庭の次回の水やり作業の締切日  - `openingHours`: この庭園の開園時間  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRecord`: この庭園に関連する測定値を含むレコードの一覧です。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `style`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'（パブリック、イングリッシュ、フレンチ、チャイニーズ、ジャパニーズ、ゼン、ロザリウム、ハーブガーデン、キッチン庭のスタイル  - `type`: NGSIエンティティタイプ。ガーデンである必要があります    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: 庭園が属する上位の地域。責任者、地区、近隣地域などの単位で庭をグループ化するのに使用することができます。  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: 庭園のカテゴリ。Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'（公営、私営、植物園、城、コミュニティ、修道院、住宅、フェンス付き）。または、アプリケーションで必要とされるその他の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastWatering[string]`: この庭の最後の水やりに対応するタイムスタンプ  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `nextWateringDeadline[string]`: この庭の次回の水やり作業の締切日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `openingHours[string]`: この庭園の開園時間  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRecord[array]`: この庭園に関連する測定値を含むレコードの一覧です。  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `style[string]`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'（パブリック、イングリッシュ、フレンチ、チャイニーズ、ジャパニーズ、ゼン、ロザリウム、ハーブガーデン、キッチン庭のスタイル  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSIエンティティタイプ。ガーデンである必要があります  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Garden:    
@@ -374,9 +388,14 @@ Garden:
   x-version: 0.0.3    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### Garden NGSI-v2キーバリューの例  
-ここでは、GardenをJSON-LD形式でkey-valuesとした場合の例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、GardenをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Santander-Garden-Piquio",  
@@ -400,8 +419,10 @@ Garden:
   "refRecord": ["Santander-Garden-Piquio-Record-1"]  
 }  
 ```  
+</details>  
 #### Garden NGSI-v2 正規化例  
 以下は、正規化されたJSON-LD形式のGardenの例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Santander-Garden-Piquio",  
@@ -449,8 +470,10 @@ Garden:
   }  
 }  
 ```  
+</details>  
 #### 庭 NGSI-LD キー値例  
 ここでは、GardenをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
@@ -519,8 +542,10 @@ Garden:
     ]  
 }  
 ```  
+</details>  
 #### 庭 NGSI-LD 正規化例  
-ここでは、JSON-LD形式のGardenを正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、GardenをJSON-LD形式で正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",  
@@ -554,8 +579,17 @@ Garden:
     ],  
     "style": "french",  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
