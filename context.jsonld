@@ -1,5 +1,8 @@
 {
     "@context": {
+        "FlowerBed": "https://smartdatamodels.org/dataModel.ParksAndGardens/FlowerBed",
+        "Garden": "https://smartdatamodels.org/dataModel.ParksAndGardens/Garden",
+        "GreenspaceRecord": "https://smartdatamodels.org/dataModel.ParksAndGardens/GreenspaceRecord",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "annotations": "https://smartdatamodels.org/annotations",
