@@ -1,0 +1,2 @@
+"id_", "type_", "dateObserved_", "location__coordinates__0_", "location__coordinates__1_", "location__type_", "refGreenspace_", "relativeHumidity_", "soilTemperature_", "temperature_", "@context__0_"
+"urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1", "GreenspaceRecord", "2019-01-15T12:00:00Z", "-3.7836974", "43.4741091", "Point", "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio", "0.87", "13", "17", "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"
