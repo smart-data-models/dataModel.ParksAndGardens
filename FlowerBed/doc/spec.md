@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Global description: **A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.**  
-version: 0.0.1  
+version: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -18,7 +18,7 @@
 - `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `annotations[array]`: Annotations about the item  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Category of this flower bed. Enum:'hedge, lawnArea, portable, urbanTreeSpot'. Or any extended value needed by the application.  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: The color of the product  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateLastWatering[string]`: Timestamp which corresponds to the last watering of the flower bed.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `depth[number]`: Depth of this flower bed.  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: A description of this item  - `height[string]`: Heigth of this flower bed.  . Model: [https://schema.org/heigth](https://schema.org/heigth)- `id[*]`: Unique identifier of the entity  - `image[string]`: An image of the item  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `nextWateringDeadline[string]`: Deadline for next watering operation.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refGarden[*]`: Flower bed's garden (if it belongs to any).  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `shape[array]`: Shape of this flower bed. Enum:'rectangular, square, elliptic, polygonal, circular'. Or any other required by an application.  . Model: [https://schema.org/depth](https://schema.org/depth)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `taxon[array]`: Used to indicate the biological [taxon](http://en.wikipedia.org/wiki/en:taxon) to which the trees, or plants in the flower bed belong  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity Type: It has to be FlowerBed  - `width[number]`: Width of this flower bed.  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
@@ -32,7 +32,7 @@ FlowerBed:
   description: 'A garden plot in which flowers (or other plants) are grown. Usually you will find flower beds in parks, gardens, pedestrian areas or at big highway interchanges.'    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -43,6 +43,9 @@ FlowerBed:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -52,17 +55,20 @@ FlowerBed:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     annotations:    
-      description: 'Annotations about the item'    
+      description: Annotations about the item    
       items:    
         type: string    
       type: array    
@@ -70,7 +76,7 @@ FlowerBed:
         model: https://schema.org/Text    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -90,49 +96,49 @@ FlowerBed:
         model: https://schema.org/Text    
         type: Property    
     color:    
-      description: 'The color of the product'    
+      description: The color of the product    
       type: string    
       x-ngsi:    
         model: https://schema.org/color    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateLastWatering:    
-      description: 'Timestamp which corresponds to the last watering of the flower bed.'    
+      description: Timestamp which corresponds to the last watering of the flower bed.    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     depth:    
-      description: 'Depth of this flower bed.'    
+      description: Depth of this flower bed.    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/depth    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     height:    
-      description: 'Heigth of this flower bed.'    
+      description: Heigth of this flower bed.    
       minimum: 0    
       type: string    
       x-ngsi:    
@@ -140,19 +146,19 @@ FlowerBed:
         type: Property    
     id:    
       anyOf: &flowerbed_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     image:    
-      description: 'An image of the item'    
+      description: An image of the item    
       format: uri    
       type: string    
       x-ngsi:    
@@ -161,7 +167,7 @@ FlowerBed:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -180,9 +186,9 @@ FlowerBed:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -204,9 +210,9 @@ FlowerBed:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -230,9 +236,9 @@ FlowerBed:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -253,9 +259,9 @@ FlowerBed:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -279,9 +285,9 @@ FlowerBed:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -307,46 +313,46 @@ FlowerBed:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     nextWateringDeadline:    
-      description: 'Deadline for next watering operation.'    
+      description: Deadline for next watering operation.    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *flowerbed_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     refGarden:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Flower bed''s garden (if it belongs to any).'    
+      description: Flower bed's garden (if it belongs to any).    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -361,11 +367,11 @@ FlowerBed:
       description: 'Shape of this flower bed. Enum:''rectangular, square, elliptic, polygonal, circular''. Or any other required by an application.'    
       items:    
         enum:    
-          - rectangular    
-          - square    
+          - circular    
           - elliptic    
           - polygon    
-          - circular    
+          - rectangular    
+          - square    
         type: string    
       minItems: 1    
       type: array    
@@ -395,7 +401,7 @@ FlowerBed:
       x-ngsi:    
         type: Property    
     width:    
-      description: 'Width of this flower bed.'    
+      description: Width of this flower bed.    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -403,15 +409,14 @@ FlowerBed:
         type: Property    
   required:    
     - id    
-    - location    
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/FlowerBed/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.ParksAndGardens/FlowerBed/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -450,9 +455,13 @@ FlowerBed:
   "id": "FlowerBed-345",  
   "type": "FlowerBed",  
   "category": {  
-    "value": ["urbanTreeSpot"]  
+    "type": "array",  
+    "value": [  
+      "urbanTreeSpot"  
+    ]  
   },  
   "soilMoistureVwc": {  
+    "type": "Number",  
     "value": 0.85  
   },  
   "dateLastWatering": {  
@@ -460,6 +469,7 @@ FlowerBed:
     "value": "2017-03-31T08:00:00Z"  
   },  
   "soilTemperature": {  
+    "type": "Number",  
     "value": 17  
   },  
   "address": {  
@@ -474,7 +484,10 @@ FlowerBed:
     "type": "geo:json",  
     "value": {  
       "type": "Point",  
-      "coordinates": [-4.743187, 41.627999]  
+      "coordinates": [  
+        -4.743187,  
+        41.627999  
+      ]  
     }  
   }  
 }  
@@ -485,52 +498,30 @@ FlowerBed:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
-    "type": "FlowerBed",  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "Spain",  
-            "streetAddress": "Paseo Zorrilla, 122",  
-            "adressLocality": "Valladolid",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "urbanTreeSpot"  
-        ]  
-    },  
-    "dateLastWatering": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2017-03-31T08:00:00Z"  
-        }  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -4.743187,  
-                41.627999  
-            ]  
-        }  
-    },  
-    "soilMoistureVwc": {  
-        "type": "Property",  
-        "value": 0.85  
-    },  
-    "soilTemperature": {  
-        "type": "Property",  
-        "value": 17  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+  "type": "FlowerBed",  
+  "address": {  
+    "addressCountry": "Spain",  
+    "streetAddress": "Paseo Zorrilla, 122",  
+    "adressLocality": "Valladolid",  
+    "type": "PostalAddress"  
+  },  
+  "category": [  
+    "urbanTreeSpot"  
+  ],  
+  "dateLastWatering": "2017-03-31T08:00:00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -4.743187,  
+      41.627999  
     ]  
+  },  
+  "soilMoistureVwc": 0.85,  
+  "soilTemperature": 17,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -539,34 +530,51 @@ FlowerBed:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
-    "type": "FlowerBed",  
-    "address": {  
-        "addressCountry": "Spain",  
-        "adressLocality": "Valladolid",  
-        "streetAddress": "Paseo Zorrilla, 122",  
-        "type": "PostalAddress"  
-    },  
-    "category": [  
-        "urbanTreeSpot"  
-    ],  
-    "dateLastWatering": {  
-        "@type": "DateTime",  
-        "@value": "2017-03-31T08:00:00Z"  
-    },  
-    "location": {  
-        "coordinates": [  
-            -4.743187,  
-            41.627999  
-        ],  
-        "type": "Point"  
-    },  
-    "soilMoistureVwc": 0.85,  
-    "soilTemperature": 17,  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",  
+  "type": "FlowerBed",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "Spain",  
+      "adressLocality": "Valladolid",  
+      "streetAddress": "Paseo Zorrilla, 122"  
+    }  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "urbanTreeSpot"  
     ]  
+  },  
+  "dateLastWatering": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-03-31T08:00:00Z"  
+    }  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "coordinates": [  
+        -4.743187,  
+        41.627999  
+      ],  
+      "type": "Point"  
+    }  
+  },  
+  "soilMoistureVwc": {  
+    "type": "Property",  
+    "value": 0.85  
+  },  
+  "soilTemperature": {  
+    "type": "Property",  
+    "value": 17  
+  },  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
