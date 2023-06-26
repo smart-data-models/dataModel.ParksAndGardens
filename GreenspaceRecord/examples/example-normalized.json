@@ -2,13 +2,15 @@
   "id": "Santander-Garden-Piquio-Record-1",
   "type": "GreenspaceRecord",
   "refGreenspace": {
-    "type": "Relationship",
+    "type": "URI",
     "value": "Santander-Garden-Piquio"
   },
   "temperature": {
+    "type": "Number"
     "value": 17
   },
   "soilTemperature": {
+    "type": "Number",
     "value": 13
   },
   "location": {
@@ -19,6 +21,7 @@
     }
   },
   "relativeHumidity": {
+    "type": "Number",
     "value": 0.87
   },
   "dateObserved": {

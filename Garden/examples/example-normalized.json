@@ -2,12 +2,17 @@
   "id": "Santander-Garden-Piquio",
   "type": "Garden",
   "category": {
-    "value": ["public"]
+    "type": "array",
+    "value": [
+      "public"
+    ]
   },
   "style": {
+    "type": "Text",
     "value": "french"
   },
   "description": {
+    "type": "Text",
     "value": "Jardines de Piquio. Zona El Sardinero"
   },
   "dateLastWatering": {
@@ -18,14 +23,20 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-3.7836974, 43.4741091]
+      "coordinates": [
+        -3.7836974,
+        43.4741091
+      ]
     }
   },
   "refRecord": {
-    "type": "Relationship",
-    "value": ["Santander-Garden-Piquio-Record-1"]
+    "type": "URI",
+    "value": [
+      "Santander-Garden-Piquio-Record-1"
+    ]
   },
   "areaServed": {
+    "type": "Text",
     "value": "El Sardinero"
   },
   "address": {
@@ -37,9 +48,11 @@
     }
   },
   "openingHours": {
+    "type": "Text",
     "value": "Mo-Su"
   },
   "name": {
+    "type": "Text",
     "value": "Jardines de Piquio"
   }
 }

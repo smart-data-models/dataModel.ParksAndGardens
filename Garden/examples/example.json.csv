@@ -1,2 +1,0 @@
-"id_", "type_", "name_", "description_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "address__streetAddress_", "address__addressLocality_", "address__postalCode_", "openingHours_", "style_", "category__0_", "areaServed_", "dateLastWatering_", "refRecord__0_"
-"Santander-Garden-Piquio", "Garden", "Jardines de Piquio", "Jardines de Piquio. Zona El Sardinero", "Point", "-3.7836974", "43.4741091", "Avenida Castañeda", "Santander", "39005", "Mo-Su", "french", "public", "El Sardinero", "2017-03-31T08:00:00Z", "Santander-Garden-Piquio-Record-1"

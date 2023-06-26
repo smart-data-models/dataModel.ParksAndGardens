@@ -2,9 +2,13 @@
   "id": "FlowerBed-345",
   "type": "FlowerBed",
   "category": {
-    "value": ["urbanTreeSpot"]
+    "type": "array",
+    "value": [
+      "urbanTreeSpot"
+    ]
   },
   "soilMoistureVwc": {
+    "type": "Number",
     "value": 0.85
   },
   "dateLastWatering": {
@@ -12,6 +16,7 @@
     "value": "2017-03-31T08:00:00Z"
   },
   "soilTemperature": {
+    "type": "Number",
     "value": 17
   },
   "address": {
@@ -26,7 +31,10 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-4.743187, 41.627999]
+      "coordinates": [
+        -4.743187,
+        41.627999
+      ]
     }
   }
 }

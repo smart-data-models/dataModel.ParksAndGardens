@@ -1,30 +1,47 @@
 {
-    "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",
-    "type": "FlowerBed",
-    "address": {
-        "addressCountry": "Spain",
-        "adressLocality": "Valladolid",
-        "streetAddress": "Paseo Zorrilla, 122",
-        "type": "PostalAddress"
-    },
-    "category": [
-        "urbanTreeSpot"
-    ],
-    "dateLastWatering": {
-        "@type": "DateTime",
-        "@value": "2017-03-31T08:00:00Z"
-    },
-    "location": {
-        "coordinates": [
-            -4.743187,
-            41.627999
-        ],
-        "type": "Point"
-    },
-    "soilMoistureVwc": 0.85,
-    "soilTemperature": 17,
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"
+  "id": "urn:ngsi-ld:FlowerBed:FlowerBed-345",
+  "type": "FlowerBed",
+  "address": {
+    "type": "Property",
+    "value": {
+      "addressCountry": "Spain",
+      "adressLocality": "Valladolid",
+      "streetAddress": "Paseo Zorrilla, 122"
+    }
+  },
+  "category": {
+    "type": "Property",
+    "value": [
+      "urbanTreeSpot"
     ]
+  },
+  "dateLastWatering": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2017-03-31T08:00:00Z"
+    }
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "coordinates": [
+        -4.743187,
+        41.627999
+      ],
+      "type": "Point"
+    }
+  },
+  "soilMoistureVwc": {
+    "type": "Property",
+    "value": 0.85
+  },
+  "soilTemperature": {
+    "type": "Property",
+    "value": 17
+  },
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"
+  ]
 }
