@@ -6,7 +6,7 @@
     "value": "Santander-Garden-Piquio"
   },
   "temperature": {
-    "type": "Number"
+    "type": "Number",
     "value": 17
   },
   "soilTemperature": {
