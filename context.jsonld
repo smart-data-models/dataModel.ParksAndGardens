@@ -10,8 +10,16 @@
         "alternateName": "https://smartdatamodels.org/alternateName",
         "annotations": "https://smartdatamodels.org/annotations",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "category": "https://smartdatamodels.org/dataModel.ParksAndGardens/category",
         "color": "https://smartdatamodels.org/color",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateLastWatering": "https://smartdatamodels.org/dataModel.ParksAndGardens/dateLastWatering",
