@@ -2,7 +2,7 @@
   "id": "Santander-Garden-Piquio-Record-1",
   "type": "GreenspaceRecord",
   "refGreenspace": {
-    "type": "URI",
+    "type": "Text",
     "value": "Santander-Garden-Piquio"
   },
   "temperature": {
@@ -17,7 +17,10 @@
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-3.7836974, 43.4741091]
+      "coordinates": [
+        -3.7836974,
+        43.4741091
+      ]
     }
   },
   "relativeHumidity": {
