@@ -3,7 +3,10 @@
   "type": "GreenspaceRecord",
   "location": {
     "type": "Point",
-    "coordinates": [-3.7836974, 43.4741091]
+    "coordinates": [
+      -3.7836974,
+      43.4741091
+    ]
   },
   "temperature": 17,
   "relativeHumidity": 0.87,
