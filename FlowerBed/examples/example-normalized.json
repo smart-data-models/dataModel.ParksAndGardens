@@ -2,7 +2,7 @@
   "id": "FlowerBed-345",
   "type": "FlowerBed",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "urbanTreeSpot"
     ]
@@ -20,7 +20,7 @@
     "value": 17
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "Spain",
       "streetAddress": "Paseo Zorrilla, 122",
