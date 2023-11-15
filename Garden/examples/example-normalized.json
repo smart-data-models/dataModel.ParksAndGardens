@@ -2,7 +2,7 @@
   "id": "Santander-Garden-Piquio",
   "type": "Garden",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "public"
     ]
@@ -30,7 +30,7 @@
     }
   },
   "refRecord": {
-    "type": "URI",
+    "type": "StructuredValue",
     "value": [
       "Santander-Garden-Piquio-Record-1"
     ]
@@ -40,7 +40,7 @@
     "value": "El Sardinero"
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressLocality": "Santander",
       "postalCode": "39005",
