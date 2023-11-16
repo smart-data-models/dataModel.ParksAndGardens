@@ -1,8 +1,7 @@
 {
   "id": "urn:ngsi-ld:GreenspaceRecord:Santander-Garden-Piquio-Record-1",
   "type": "GreenspaceRecord",
-  "dateObserved": "2019-01-15T12:00:00Z"
-  ,
+  "dateObserved": "2019-01-15T12:00:00Z",
   "location": {
     "coordinates": [
       -3.7836974,
