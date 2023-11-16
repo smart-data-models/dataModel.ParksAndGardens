@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `alternateName[string]`: An alternative name for this item  - `annotations[array]`: Annotations about the item  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: Higher level area to which the garden belongs to. It can be used to group gardens per responsible, district, neighbourhood, etc  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Garden's category. Enum:'public, private, botanical, castle, community, monastery, residential, fencedOff'. Or any other value needed by an application  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: The color of the product  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateLastWatering[date-time]`: Timestamp which corresponds to the last watering of this garden  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `image[uri]`: An image of the item  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `nextWateringDeadline[date-time]`: Deadline for next watering operation to be done on this garden  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `openingHours[string]`: Opening hours of this garden  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRecord[array]`: List of records which contain measurements related to this garden  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `style[string]`: Enum:'public, english, french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Garden's style  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity Type: It has to be Garden  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
@@ -460,11 +461,11 @@ Garden:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.ParksAndGardens/blob/master/Garden/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel/ParksAndGardens/Garden/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.3    
+  x-version: 0.0.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -483,19 +484,26 @@ Garden:
   "description": "Jardines de Piquio. Zona El Sardinero",  
   "location": {  
     "type": "Point",  
-    "coordinates": [-3.7836974, 43.4741091]  
+    "coordinates": [  
+      -3.7836974,  
+      43.4741091  
+    ]  
   },  
   "address": {  
-    "streetAddress": "Avenida Castañeda",  
+    "streetAddress": "Avenida Casta\u00f1eda",  
     "addressLocality": "Santander",  
     "postalCode": "39005"  
   },  
   "openingHours": "Mo-Su",  
   "style": "french",  
-  "category": ["public"],  
+  "category": [  
+    "public"  
+  ],  
   "areaServed": "El Sardinero",  
   "dateLastWatering": "2017-03-31T08:00:00Z",  
-  "refRecord": ["Santander-Garden-Piquio-Record-1"]  
+  "refRecord": [  
+    "Santander-Garden-Piquio-Record-1"  
+  ]  
 }  
 ```  
 </details>  
@@ -507,7 +515,7 @@ Garden:
   "id": "Santander-Garden-Piquio",  
   "type": "Garden",  
   "category": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "public"  
     ]  
@@ -535,7 +543,7 @@ Garden:
     }  
   },  
   "refRecord": {  
-    "type": "URI",  
+    "type": "StructuredValue",  
     "value": [  
       "Santander-Garden-Piquio-Record-1"  
     ]  
@@ -545,7 +553,7 @@ Garden:
     "value": "El Sardinero"  
   },  
   "address": {  
-    "type": "PostalAddress",  
+    "type": "StructuredValue",  
     "value": {  
       "addressLocality": "Santander",  
       "postalCode": "39005",  
@@ -579,8 +587,7 @@ Garden:
   "category": [  
     "public"  
   ],  
-  "dateLastWatering":  "2017-03-31T08:00:00Z"  
-  ,  
+  "dateLastWatering": "2017-03-31T08:00:00Z",  
   "description": "Jardines de Piquio. Zona El Sardinero",  
   "location": {  
     "coordinates": [  
