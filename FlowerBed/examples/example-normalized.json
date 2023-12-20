@@ -7,17 +7,9 @@
       "urbanTreeSpot"
     ]
   },
-  "soilMoistureVwc": {
-    "type": "Number",
-    "value": 0.85
-  },
   "dateLastWatering": {
     "type": "DateTime",
     "value": "2017-03-31T08:00:00Z"
-  },
-  "soilTemperature": {
-    "type": "Number",
-    "value": 17
   },
   "address": {
     "type": "StructuredValue",
