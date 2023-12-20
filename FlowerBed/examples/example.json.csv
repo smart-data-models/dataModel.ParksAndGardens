@@ -1,2 +1,2 @@
-"id_", "type_", "category__0_", "dateLastWatering_", "address__streetAddress_", "address__adressLocality_", "address__addressCountry_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "soilTemperature_", "soilMoistureVwc_"
-"FlowerBed-345", "FlowerBed", "urbanTreeSpot", "2017-03-31T08:00:00Z", "Paseo Zorrilla, 122", "Valladolid", "Spain", "Point", "-4.743187", "41.627999", "17", "0.85"
+"id_", "type_", "category__0_", "dateLastWatering_", "address__streetAddress_", "address__adressLocality_", "address__addressCountry_", "location__type_", "location__coordinates__0_", "location__coordinates__1_"
+"FlowerBed-345", "FlowerBed", "urbanTreeSpot", "2017-03-31T08:00:00Z", "Paseo Zorrilla, 122", "Valladolid", "Spain", "Point", "-4.743187", "41.627999"
