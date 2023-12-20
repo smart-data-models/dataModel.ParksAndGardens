@@ -1,2 +1,2 @@
-"id_", "type_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "temperature_", "refGreenspace_", "dateObserved_"
-"Santander-Garden-Piquio-Record-1", "GreenspaceRecord", "Point", "-3.7836974", "43.4741091", "17", "Santander-Garden-Piquio", "2019-01-15T12:00:00Z"
+"id_", "type_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "refGreenspace_", "dateObserved_"
+"Santander-Garden-Piquio-Record-1", "GreenspaceRecord", "Point", "-3.7836974", "43.4741091", "Santander-Garden-Piquio", "2019-01-15T12:00:00Z"
