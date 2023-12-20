@@ -22,10 +22,6 @@
     "type": "Relationship",
     "object": "urn:ngsi-ld:Greenspace:Santander-Garden-Piquio"
   },
-  "relativeHumidity": {
-    "type": "Property",
-    "value": 0.87
-  },
   "soilMoisturePressure": {
     "type": "Property",
     "value": 11
@@ -33,10 +29,6 @@
   "soilTemperature": {
     "type": "Property",
     "value": 13
-  },
-  "temperature": {
-    "type": "Property",
-    "value": 17
   },
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"
