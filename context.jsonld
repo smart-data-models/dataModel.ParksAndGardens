@@ -12,13 +12,13 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "category": "https://smartdatamodels.org/dataModel.ParksAndGardens/category",
         "color": "https://smartdatamodels.org/color",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
@@ -32,7 +32,7 @@
         "id": "@id",
         "image": "https://smartdatamodels.org/image",
         "litterCoverage": "https://smartdatamodels.org/dataModel.ParksAndGardens/litterCoverage",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "name": "https://smartdatamodels.org/name",
         "nextWateringDeadline": "https://smartdatamodels.org/dataModel.ParksAndGardens/nextWateringDeadline",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
