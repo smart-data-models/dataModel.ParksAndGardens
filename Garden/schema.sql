@@ -1,5 +1,5 @@
 /* (Beta) Export of data model Garden of the subject dataModel.ParksAndGardens for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE style_type AS ENUM ('chinese', 'english', 'french', 'herb_garden', 'japanese', 'kitchen', 'public', 'rosarium', 'zen');
+CREATE TYPE Garden_style_type AS ENUM ('chinese', 'english', 'french', 'herb_garden', 'japanese', 'kitchen', 'public', 'rosarium', 'zen');
 CREATE TYPE Garden_type AS ENUM ('Garden');
 CREATE TABLE Garden (
   "address" JSON,
@@ -23,6 +23,6 @@ CREATE TABLE Garden (
   "refRecord" JSON,
   "seeAlso" JSON,
   "source" TEXT,
-  "style" style_type,
+  "style" Garden_style_type,
   "type" Garden_type
 );
